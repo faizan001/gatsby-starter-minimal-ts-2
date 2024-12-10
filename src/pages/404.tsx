@@ -1,15 +1,12 @@
 import * as React from "react"
 import { Link, HeadFC, PageProps } from "gatsby"
+import SubTitle from "../components/text/subtitle"
+import logo_black from "../images/logo_black.svg"
 
 const pageStyles = {
   color: "#232129",
   padding: "96px",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
 }
 
 const paragraphStyles = {
@@ -26,9 +23,15 @@ const codeStyles = {
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
+      <img
+        className="block w-auto max-w-[85px] sm:max-w-none"
+        alt="Flair Logo"
+        src={logo_black}
+        loading="eager"
+      />
+      <SubTitle className="mt-10">Page not found</SubTitle>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        Sorry, we couldn’t find what you were looking for.
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
@@ -38,7 +41,10 @@ const NotFoundPage: React.FC<PageProps> = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/" className="text-main-blue hover:opacity-80">
+          Go home
+        </Link>
+        .
       </p>
     </main>
   )

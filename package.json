@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-minimal-ts",
+  "name": "flair-website",
   "version": "1.0.0",
   "private": true,
-  "description": "A Gatsby starter written in TypeScript with no plugins and a single welcome page.",
-  "author": "Jude Agboola",
+  "description": "flair-website",
+  "author": "ze",
   "keywords": [
     "gatsby"
   ],
@@ -15,16 +15,36 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
-  "license": "0BSD",
   "dependencies": {
-    "gatsby": "^5.14.0",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "autoprefixer": "^10.4.14",
+    "gatsby": "^5.11.0",
+    "gatsby-omni-font-loader": "^2.0.2",
+    "gatsby-plugin-cookiebot": "^1.0.3",
+    "gatsby-plugin-google-gtag": "^5.11.0",
+    "gatsby-plugin-image": "^3.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-postcss": "^6.11.0",
+    "gatsby-plugin-scroll-reveal": "^0.0.7",
+    "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-plugin-sitemap": "^6.11.0",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
+    "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-source-strapi": "^3.3.0",
+    "gatsby-transformer-sharp": "^5.11.0",
+    "keen-slider": "^6.8.6",
+    "postcss": "^8.4.25",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-scroll-parallax": "^3.4.2",
+    "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "typescript": "^5.3.3"
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "typescript": "^5.1.6"
   }
 }

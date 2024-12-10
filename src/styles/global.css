@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+    }
+}
+
+.flr-text-container{
+    @apply max-w-[590px]
+}
+.flr-text-container-lg{
+    @apply max-w-[640px]
+}
+
+/* hero */
+.flr-hero-section{    
+    @apply grid text-neutral-0;
+}
+.flr-hero-bg-image,
+.flr-hero-bg-container{
+    grid-area: 1/1;
+}
+/* .flr-hero-bg-image{
+    @apply sm:h-[760px];
+}  */
+.flr-hero-bg-container{    
+    @apply relative place-items-center flex flex-col pb-[100px] pt-[200px] sm:pt-[170px]
+}
+.flr-hero-title{    
+    @apply text-4xl sm:text-6xl mb-5 font-highlight
+}
+.flr-hero-paragraph{    
+    @apply text-base
+}
+
+/* Background image for gatsby-image */
+.flr-bg-section{
+    @apply grid
+}
+.flr-bg-image,
+.flr-bg-container{
+    grid-area: 1/1;
+}
+.flr-bg-container{    
+    @apply relative
+}
+
+/* Utils */
+.flr-anchor-target{
+    @apply scroll-mt-[60px] sm:scroll-mt-[95px]
+}
+.flr-footer-spacing{
+    @apply mb-10 sm:mb-20
+}
+.flr-container-override-left{
+    @apply -mx-4 sm:-mx-0 sm:-ml-6 lg:-ml-8
+}
+.flr-container-override-right{
+    @apply -mx-4 sm:-mx-0 sm:-mr-6 lg:-mr-8
+}
+
+/* Carousel */
+[class^="number-slide"],
+[class*=" number-slide"] {
+  @apply flex items-stretch justify-stretch
+}
