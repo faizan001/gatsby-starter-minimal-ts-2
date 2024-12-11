@@ -13,7 +13,25 @@ import { ChevronUpIcon } from "@heroicons/react/24/outline"
 import ModalPartner from "../components/modal/modalPartner"
 import { SEO } from "../components/seo/seo"
 import Slider from "../components/slider/slider"
-
+import DownloadApp from "../components/downloadApp/downloadApp"
+import HalfBlock from "../components/halfBlock/halfBlock"
+import mudanca from "../images/mudanca.png"
+import BrandContainer from "../components/brand/brandContainer"
+import Cta from "../components/cta/cta"
+import Pricing from "../components/pricing/plans"
+import shopify from "../images/shopify.png"
+import moloni from "../images/molony.png"
+import cage from "../images/cage.png"
+import cegid from "../images/cegid.png"
+import vendus from "../images/vendus.png"
+import pLogo1 from '../images/pl-1.png'
+import pLogo2 from '../images/pl-2.png'
+import pLogo3 from '../images/pl-3.png'
+import pLogo4 from '../images/pl-4.png'
+import pLogo5 from '../images/pl-5.png'
+import pLogo6 from '../images/pl-6.png'
+import pLogo7 from '../images/pl-7.png'
+import pLogo8 from '../images/pl-8.png'
 const faqs = [
   {
     title: "Quem fica responsável pelos serviços pós-venda?",
@@ -35,7 +53,7 @@ const faqs = [
 const sliderOptions = {
   initial: 0,
   slides: {
-    perView: 3,
+    perView: 4.2,
     spacing: 25,
   },
   breakpoints: {
@@ -56,19 +74,74 @@ const sliderOptions = {
 
 const sliderSlides = [
   {
-    title: "Aumenta a notoriedade da tua marca",
+    title: "Catálogo integrado",
     description:
-      "Oportunidades de cobertura editorial e destaque de produtos em toda a nossa plataforma, blog, redes sociais, newsletters e a app da Flair, sem custos adicionais para os teus artigos selecionados.",
+      "Conecte o seu POS, ERP ou webshop com a nossa plataforma para a disponibilidade de produtos em loja estar sempre correta.",
   },
   {
-    title: "Integração de POS",
+    title: "Logística simples",
     description:
-      "Integramos vários softwares de ponto-de-venda, permitindo que os vendedores acelerem o seu negócio online e comecem a processar vendas em grande escala -  incluindo informações de produtos, processamento de catálogos e gestão de stock em tempo real.",
+      "Em caso de devolução a Flair trata de todo o processo, a loja só tem de receber a devolução.",
   },
   {
-    title: "Ecossistema completo",
+    title: "Gestão Eficiente",
     description:
-      "Entregas seguras e rápidas das lojas para as próprias casas dos clientes. Com parceiros logísticos de confiança, priorizamos a entrega imediata e segura dos produtos. Os vendedores podem aproveitar a nossa experiência tanto na entrega como no serviço ao cliente, garantindo uma experiência perfeita para todos.",
+      "Consulte análises de venda, entregas pendentes e faça a gestão de presença da loja e preço no marketplace Flair.",
+  },
+  {
+    title: "Suporte ao cliente",
+    description:
+      "A Flair trata de todos os problemas com clientes, só contacta a loja para questões de litígio.",
+  },
+  {
+    title: "garantia de Transporte",
+    description:
+      "A Flair colabora com as melhores e mais seguras empresas de transporte, com um seguro até 1.000,00€",
+  },
+]
+
+const brandImages = [
+  {
+    image: [shopify]
+  },
+  {
+    image: [moloni]
+  },
+  {
+    image: [cage]
+  },
+  {
+    image: [cegid]
+  },
+  {
+    image: [vendus]
+  }
+]
+
+const mainBrands = [
+  {
+    image: [pLogo1]
+  },
+  {
+    image: [pLogo2]
+  },
+  {
+    image: [pLogo3]
+  },
+  {
+    image: [pLogo4]
+  },
+  {
+    image: [pLogo5]
+  },
+  {
+    image: [pLogo6]
+  },
+  {
+    image: [pLogo7]
+  },
+  {
+    image: [pLogo8]
   },
 ]
 
@@ -81,33 +154,32 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
             className="flr-hero-bg-image opacity-40 max-h-[500px]"
             layout="fullWidth"
             alt="Flair - Parcerias"
-            src={"../images/header_3.jpg"}
+            src={"../images/parcerias.png"}
             formats={["auto", "webp", "avif"]}
             quality={100}
+            
           />
+
           <Container className="flr-hero-bg-container">
             <div className="flr-text-container text-center">
               <h1 className="flr-hero-title">Parcerias</h1>
+              <Paragraph className="text-white w-full sm:w-[600px]">
+                Aumenta as vendas da tua loja com a Flair sem investimento em e-comerce ou recursos extra. Vê como tudo funciona.
+              </Paragraph>
             </div>
           </Container>
         </section>
 
         <Section>
-          <Container>
+          <Container className="w-full sm:w-[900px]">
             <>
               <div className="flr-text-container m-auto">
                 <Label className="text-main-blue">
-                  A Plataforma para vendas imediatas
+                  Torna-te Parceiro
                 </Label>
                 <Title className="text-neutral-9" tag="h2">
-                  Faz parte da melhor experiência de checkout online
+                  Como funcionam as parcerias
                 </Title>
-                <Paragraph className="text-neutral-7 mb-10">
-                  para os teus clientes locais e completa os pedidos com os
-                  serviços de logística da Flair. Começa a interagir com o teu
-                  público-alvo de maneiras inovadoras e constrói relações mais
-                  próximas.
-                </Paragraph>
                 <div className="flex w-full justify-center sm:justify-start">
                   <ModalPartner
                     location={location}
@@ -115,39 +187,30 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 mt-32">
+              <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 mt-20">
                 <div className="basis-1/3">
-                  <SubTitle tag="h3" className="text-neutral-6">
-                    maximiza a tua Visibilidade
+                  <SubTitle tag="h3" className="text-neutral-9">
+                    RegistO na flair
                   </SubTitle>
                   <Paragraph className="text-neutral-7">
-                    Expande o teu alcance instantaneamente. A nossa aplicação
-                    leva a tua loja a novas audiencias. Torna-te nosso parceiro
-                    para te focares no que fazes melhor: criar e escolher peças
-                    de moda incríveis.
+                    Agenda uma call e recebe um tablet em loja! Expande o teu alcance instantaneamente.
+                    A app Flair leva a tua loja a novas audiências onde os utilizadores compram em todas as suas lojas favoritas. 
                   </Paragraph>
                 </div>
                 <div className="basis-1/3">
-                  <SubTitle tag="h3" className="text-neutral-6">
-                    digitaliza o inventário da tua loja
+                  <SubTitle tag="h3" className="text-neutral-9">
+                    Pedidos e vendas
                   </SubTitle>
                   <Paragraph className="text-neutral-7">
-                    A Flair permite que pequenas e médias empresas aproveitem a
-                    digitalização e prosperem na economia digital sem qualquer
-                    esforço de aquisição de clientes.
+                    A app Flair permite a integração automática do teu catálogo (POS), desta forma a loja recebe notificações imediatas com o detalhe de cada venda para a preparação do saco de compras.
                   </Paragraph>
                 </div>
                 <div className="basis-1/3">
-                  <SubTitle tag="h3" className="text-neutral-6">
-                    adota as entregas de Last Mile
+                  <SubTitle tag="h3" className="text-neutral-9">
+                    serviços de entrega
                   </SubTitle>
                   <Paragraph className="text-neutral-7">
-                    Entregas ecológicas por lojas locais com logística Last
-                    Mile. As nossas entregas de bicicleta reduzem
-                    significativamente as emissões de gases de efeito estufa em
-                    comparação com longas distâncias ou uso de transporte
-                    tradicional. Escolhe a Flair para uma experiência de compra
-                    mais verde e sustentável.
+                    A Flair trata de todas as entregas, sejam imediatas ou agendadas para outro dia. A encomenda é recolhida pelo CTT Now garantindo uma experiência de compra rápida, segura e sustentável.
                   </Paragraph>
                 </div>
               </div>
@@ -155,72 +218,68 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
           </Container>
         </Section>
 
-        <Section type="full" className="bg-neutral-9">
+        <section className="relative bg-neutral-9 py-20"><StaticImage
+          className="flr-section-bg-img sm:max-h-[860px] opacity-100"
+          layout="fullWidth"
+          alt="Flair - A Flair leva a moda ate ti de imediato."
+          src={"../images/bg-pattern.png"}
+          formats={["auto", "webp", "avif"]}
+          quality={100}
+        />
           <Container className="flex flex-col items-center">
             <>
               <div className="flex flex-col items-center mb-6 sm:mb-14">
-                <Label className="text-main-purple">Descobre</Label>
+                <Label className="text-main-purple">Benefícios da app</Label>
                 <Title tag="h2" className="text-neutral-0">
-                  OS NOSSOS SERVIÇOS
+                  O futuro está na Flair
                 </Title>
               </div>
               <Slider
                 options={sliderOptions}
                 slides={sliderSlides}
-                navHidesOn="min-[1000px]:hidden"
+                navHidesOn="min-[1200px]:hidden"
               />
             </>
           </Container>
-        </Section>
+        </section>
 
-        <Section>
-          <Container className="flex flex-col sm:flex-row">
-            <>
-              <div
-                className="sm:basis-2/4 lg:basis-3/4 mb-14 sm:mb-0 sm:mr-10"
-                data-sal="slide-up"
-                data-sal-duration="500"
-                data-sal-easing="ease"
-              >
-                <StaticImage
-                  alt={"Flair - Torna-te Parceiro"}
-                  src={"../images/become_partner.png"}
-                  placeholder="none"
-                  transformOptions={{ fit: "contain" }}
-                  quality={100}
-                  className="flr-container-override-left"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="sm:basis-2/4 flex flex-col justify-center items-start">
-                <Label className="text-main-blue">Torna-te Parceiro</Label>
-                <Title className="text-neutral-9" tag="h2">
-                  Alcança novos clientes e aumenta as vendas da tua loja com o
-                  nosso servico
-                </Title>
-                <Paragraph className="text-neutral-7 mb-10">
-                  As lojas só precisam de uma conexão à internet, um sistema de
-                  ponto de venda (POS) e de escolher quais produtos que desejam
-                  vender no nosso marketplace. A Flair trata do software,
-                  conteúdo online, serviços de pagamento, serviço ao cliente,
-                  suporte pós-venda e apoio geral. Sem taxas adicionais, os
-                  vendedores só pagam pelo que vendem.
-                </Paragraph>
-                <div className="flex w-full justify-center sm:justify-start">
-                  <ModalPartner
-                    location={location}
-                    buttonLabel="Junta-te a nós"
-                  />
-                </div>
-              </div>
-            </>
-          </Container>
-        </Section>
-
+        <HalfBlock
+          image={mudanca}
+          label="A mudança"
+          title="O que nos diferencia"
+          desc1="Component - Text format - Wide"
+          desc2="Aumento de vendas sem esforço de investimento modelo de entregas sustentável com redução de emissões de CO2"
+          button={true}
+          btnHref="/"
+          btnLabel="JUNTA-TE A NÓS"
+          imgAlt=""
+          imgClass=""
+          className="sm:flex-row flex-col"
+          containerTextClass="items-start"
+          imgFit="contain" />
+        
+        
+        <BrandContainer
+          brandImages={brandImages}
+          button={false}
+          isCt={false}
+          label="Torna-te Parceiro"
+          desc="Se o teu POS (sistema operativo) não está listado abaixo, entra em contacto connosco!"
+          title="Integra a tua loja na flair de forma imediata" />
+        <Cta title={"Torna-te Parceiro"} label={"grátis 3 meses sem fidelizações"} btnLabel={"JUNTA-TE A NÓS"} btnHref={"/"} />
+        <BrandContainer
+          brandImages={mainBrands}
+          button={true}
+          isCt={true}
+          label="Parcerias"
+          desc="Conhece todas as nossas lojas parceiras"
+          title="lojas parceiras" />
+        <Pricing />
+        <DownloadApp />
         <Section
-          type="full"
-          isLast={true}
-          className="bg-neutral-8 text-neutral-0"
+          // type="full"
+          isLast={false}
+          className="bg-neutral-8 text-neutral-0 mt-0"
         >
           <Container>
             <>

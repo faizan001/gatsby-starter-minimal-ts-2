@@ -3,15 +3,11 @@ import type { HeadFC, PageProps } from "gatsby"
 import { Layout } from "../components/layout/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Container from "../components/structure/container"
-import Label from "../components/text/label"
-import Section from "../components/structure/section"
-import SubTitle from "../components/text/subtitle"
 import Paragraph from "../components/text/paragraph"
-import Title from "../components/text/title"
-// import scrollTo from "gatsby-plugin-smoothscroll"
 import { SEO } from "../components/seo/seo"
-import { BuildingStorefrontIcon } from "@heroicons/react/24/outline"
-
+import HalfBlock from "../components/halfBlock/halfBlock"
+import lacohoix from "../images/lacohoix.png"
+import erica from "../images/erica.png"
 const storesData: {
   locations: {
     [key: string]: {
@@ -119,82 +115,83 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
       <>
-        <Section>
-          <Container size="sm">
-            <div className="relative flex flex-col pt-10 sm:pt-[100px]">
-              <Label className="text-main-blue">Far far away</Label>
-              <Title className="text-neutral-9" tag="h1">
-                Far far away, behind the world mountains, far fr
-              </Title>
-              <Paragraph className="text-neutral-9">
-                Far far away, behind the world mountains, far from the countries
-                Vokalia and Consonantia, theres live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics
+        <section className="flr-hero-section bg-neutral-9">
+          <StaticImage
+            className="flr-hero-bg-image opacity-40 max-h-[500px]"
+            layout="fullWidth"
+            alt="Flair - Parcerias"
+            src={"../images/logas.png"}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+
+          />
+          <Container className="flr-hero-bg-container">
+            <div className="flr-text-container text-center">
+              <h1 className="flr-hero-title">Lojas parceiras</h1>
+              <Paragraph className="text-white w-full sm:w-[600px]">
+                Conheçe as lojas parceiras com condições exclusivas
               </Paragraph>
             </div>
           </Container>
-        </Section>
-        {/* 
-        <Section className="flr-footer-spacing">
-          <Container size="sm">
-            <div className="w-full flex flex-col space-y-20 sm:space-y-28">
-              {storesData.locations[selectedLocation].children.map(
-                (storeId, i) => {
-                  const store = storesData.stores[storeId]
-                  const currentDate = new Date()
-                  const currentHour = currentDate.getHours()
-
-                  return (
-                    <div
-                      key={i}
-                      id={store.id}
-                      className="flex flex-col flr-anchor-target"
-                    >
-                      {store.image}
-                      <SubTitle
-                        className="mt-8 sm:mt-10 text-neutral-9"
-                        tag="h3"
-                      >
-                        {store.name}
-                      </SubTitle>
-                      <div className="flex flex-row items-center mb-4">
-                        <BuildingStorefrontIcon className="h-6 w-6 text-neutral-4 mr-3" />
-                        <div className="text-neutral-8">
-                          <span
-                            className={`inline-block px-1 rounded-md ${
-                              currentHour < store.time.closes &&
-                              currentHour > store.time.opens
-                                ? "bg-[#83F8C0]"
-                                : "bg-[#F89DAB]"
-                            }`}
-                          >
-                            Open until{" "}
-                            <span className="font-bold">
-                              {store.time.closes % 12 || 12}
-                              {store.time.closes >= 12 ? "pm" : "am"}
-                            </span>
-                          </span>
-                          <span className={`block px-1`}>
-                            Reopens at{" "}
-                            <span className="font-bold">
-                              {store.time.opens % 12 || 12}
-                              {store.time.opens >= 12 ? "pm" : "am"}
-                            </span>
-                          </span>
-                        </div>
-                      </div>
-                      <Paragraph className="text-neutral-7">
-                        {store.description}
-                      </Paragraph>
-                    </div>
-                  )
-                }
-              )}
-            </div>
-          </Container>
-        </Section> */}
+        </section>
+        <HalfBlock
+          image={lacohoix}
+          title="Lachoix"
+          desc1="A Lachoix é uma marca portuguesa líder no segmento de surf e skate, oferecendo uma ampla gama de produtos que incluem pranchas de surf e skate, vestuário, calçado e acessórios. Fundada em outubro de 1996, a marca inaugurou a sua primeira loja no centro da Ericeira, reforçando a sua autenticidade e ligação às culturas do surf e skate."
+          desc2="Billabong, Element, RVCA, Nixon, Dakine, VonZipper, Vans, Carhartt, Cariuma, Ericeira Surf & Skate (marca própria)."
+          secondaryTitle="secondary title"
+          button={true}
+          btnHref="/"
+          btnLabel="Visitar"
+          imgAlt=""
+          imgClass=""
+          className="sm:flex-row flex-col"
+          containerTextClass="items-start"
+          imgFit="contain" />
+        <HalfBlock
+          image={erica}
+          title="Ericeira surf & skate"
+          desc1="A Ericeira Surf & Skate é uma marca portuguesa líder no segmento de surf e skate, oferecendo uma ampla gama de produtos que incluem pranchas de surf e skate, vestuário, calçado e acessórios. Fundada em outubro de 1996, a marca inaugurou a sua primeira loja no centro da Ericeira, reforçando a sua autenticidade e ligação às culturas do surf e skate."
+          desc2="Billabong, Element, RVCA, Nixon, Dakine, VonZipper, Vans, Carhartt, Cariuma, Ericeira Surf & Skate (marca própria)."
+          secondaryTitle="secondary title"
+          button={true}
+          btnHref="/"
+          btnLabel="Visitar"
+          imgAlt=""
+          imgClass=""
+          className="sm:flex-row-reverse flex-col"
+          containerTextClass="items-start"
+          imgFit="contain" />
+        <HalfBlock
+          image={lacohoix}
+          title="Lachoix"
+          desc1="A Lachoix é uma marca portuguesa líder no segmento de surf e skate, oferecendo uma ampla gama de produtos que incluem pranchas de surf e skate, vestuário, calçado e acessórios. Fundada em outubro de 1996, a marca inaugurou a sua primeira loja no centro da Ericeira, reforçando a sua autenticidade e ligação às culturas do surf e skate."
+          desc2="Billabong, Element, RVCA, Nixon, Dakine, VonZipper, Vans, Carhartt, Cariuma, Ericeira Surf & Skate (marca própria)."
+          secondaryTitle="secondary title"
+          button={true}
+          btnHref="/"
+          btnLabel="Visitar"
+          imgAlt=""
+          imgClass=""
+          className="sm:flex-row flex-col"
+          containerTextClass="items-start"
+          imgFit="contain" />
+        <HalfBlock
+          image={erica}
+          title="Ericeira surf & skate"
+          desc1="A Ericeira Surf & Skate é uma marca portuguesa líder no segmento de surf e skate, oferecendo uma ampla gama de produtos que incluem pranchas de surf e skate, vestuário, calçado e acessórios. Fundada em outubro de 1996, a marca inaugurou a sua primeira loja no centro da Ericeira, reforçando a sua autenticidade e ligação às culturas do surf e skate."
+          desc2="Billabong, Element, RVCA, Nixon, Dakine, VonZipper, Vans, Carhartt, Cariuma, Ericeira Surf & Skate (marca própria)."
+          secondaryTitle="secondary title"
+          button={true}
+          btnHref="/"
+          btnLabel="Visitar"
+          imgAlt=""
+          imgClass=""
+          className="sm:flex-row-reverse flex-col"
+          containerTextClass="items-start"
+          imgFit="contain" />
       </>
-    </Layout>
+      </Layout>
   )
 }
 

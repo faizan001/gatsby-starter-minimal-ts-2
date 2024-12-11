@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Container from "../structure/container";
-import Title from "../text/title";
 import Paragraph from "../text/paragraph";
-import ButtonOutlineSquare from "../button/button_outline_square";
 import logo from "../../images/logo.svg";
-import googleStore from "../../images/google-store.svg";
-import appleStore from "../../images/apple-store.svg";
-
+import DownloadApp from "../downloadApp/downloadApp";
 const Footer: React.FC = () => {
   const [formError, setFormError] = useState<null | string>(null);
   const [formSubmited, setFormSubmited] = useState(false);
-
   const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.target as any);
@@ -58,61 +53,6 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-main-turquoise via-main-purple to-main-blue pt-20 sm:pt-0">
-        <Container className="flr-bg-container flex flex-col sm:flex-row items-center sm:items-end sm:space-x-5">
-          <>
-            <div className="basis-1/2 text-neutral-0 text-center sm:text-left sm:py-20">
-              <Title tag="h3">em breve</Title>
-              <Paragraph>Faz parte do mundo da moda "on-demand" </Paragraph>
-              <div className="inline-block mt-8">
-                <span className="inline-block w-full text-xl sm:text-2xl mb-5 text-main-turquoise font-medium">
-                  Em breve disponível para download
-                </span>
-              </div>
-              <div className="flex flex-col md:flex-row w-full items-center sm:justify-center space-y-4 md:space-y-0 md:space-x-4">
-                <ButtonOutlineSquare href="https://play.google.com/store/games?device=windows">
-                  <>
-                    <img
-                      alt={"Social media icon - download no Google Play"}
-                      src={googleStore}
-                    />
-                    <div className="w-full">
-                      <span className="text-xs font-light">
-                        FAZ DOWNLOAD NO
-                      </span>
-                      <div className="text-2xl/[20px]">Google Play</div>
-                    </div>
-                  </>
-                </ButtonOutlineSquare>
-                <ButtonOutlineSquare href="https://www.apple.com/store">
-                  <>
-                    <img
-                      alt={"Social media icon - Download na Apple Store"}
-                      src={appleStore}
-                    />
-                    <div className="w-full">
-                      <span className="text-xs font-light">
-                        FAZ DOWNLOAD NA
-                      </span>
-                      <div className="text-2xl/[20px]">App Store</div>
-                    </div>
-                  </>
-                </ButtonOutlineSquare>
-              </div>
-            </div>
-            <div className="basis-1/2 pt-10 flex justify-end">
-              <StaticImage
-                alt={"Flair - Download"}
-                src={"../../images/bg_download.png"}
-                placeholder="none"
-                transformOptions={{ fit: "contain" }}
-                quality={100}
-                className="flr-bg-image"
-              />
-            </div>
-          </>
-        </Container>
-      </section>
       <section className="bg-neutral-9 py-10">
         <Container className="flex flex-col space-y-20">
           <>

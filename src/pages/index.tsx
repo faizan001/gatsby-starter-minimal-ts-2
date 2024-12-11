@@ -14,13 +14,29 @@ import { SEO } from "../components/seo/seo"
 import { Parallax } from "react-scroll-parallax"
 import Slider from "../components/slider/slider"
 import ModalJoin from "../components/modal/modalJoin"
+import DownloadApp from "../components/downloadApp/downloadApp"
+import Cta from "../components/cta/cta"
 import googleStore from "../images/google-store.svg"
 import appleStore from "../images/apple-store.svg"
-
+import brand1 from "../images/brand-1.png"
+import brand2 from "../images/brand-2.png"
+import brand3 from "../images/brand-3.png"
+import BrandContainer from "../components/brand/brandContainer"
+import HalfBlock from "../components/halfBlock/halfBlock"
+import pLogo1 from '../images/pl-1.png'
+import pLogo2 from '../images/pl-2.png'
+import pLogo3 from '../images/pl-3.png'
+import pLogo4 from '../images/pl-4.png'
+import pLogo5 from '../images/pl-5.png'
+import pLogo6 from '../images/pl-6.png'
+import pLogo7 from '../images/pl-7.png'
+import pLogo8 from '../images/pl-8.png'
+import whatWeDo from "../images/what_we_do.png"
+import imgCtt from "../images/ctt-img.png"
 const sliderOptions = {
   initial: 0,
   slides: {
-    perView: 4,
+    perView: 3,
     spacing: 25,
   },
   breakpoints: {
@@ -47,23 +63,47 @@ const sliderOptions = {
 
 const sliderSlides = [
   {
-    title: "Simples",
-    description: `Simplificamos as compras de moda. Experimenta a entrega mais rápida, mais economica, mais amiga do ambiente e desfruta do suporte pós-venda sem complicações. Acaba com a espera de entregas lentas como  atrasos desnecessários em reembolsos.`,
+    image: brand1,
+    title: "Compra imediata",
+    description: "Compras sem espera, com entregas até 2 horas para 10km de distância",
   },
   {
-    title: "Inspiração",
-    description:
-      "Aqui encontras as tuas marcas favoritas. Explora novas tendências e navega pela nossa curadoria de coleções. Desde os ténis que procuravas, até descobertas de boutiques que nao conhecias, a Flair oferece inspiração para todas as ocasiões e estilos",
+    image: brand2,
+    title: "Entrega económica",
+    description:"Compra em várias lojas, recebe só uma encomenda com a taxa única de 3,75€",
   },
   {
-    title: "Divertimento",
+    image: brand3,
+    title: "devolução grátis",
     description:
-      "A melhor experiência de compras de moda. Cria o teu cesto de compras, aproveita a gratificação imediata, agenda entregas convenientes e beneficia de devoluções gratuitas e reembolsos imediatos. So divertimento, sem stress.",
+      "Devolução fácil até 30 dias na sua loja, com reembolso do valor total",
+  },
+]
+
+const brandImages = [
+  {
+    image: [pLogo1]
   },
   {
-    title: "Plural",
-    description:
-      "Onde encontras designs locais, boutiques e biquínis feitos à mão. Unindo lojas, designers e marcas de nicho, oferecemos-te a melhor personalização e uma qualidade excepcional. Explora um portfólio de produtos incomparável na Flair.",
+    image: [pLogo2]
+  },
+  {
+    image: [pLogo3]
+  },
+  {
+    image: [pLogo4]
+  },
+  {
+    image: [pLogo5]
+  },
+  {
+    image: [pLogo6]
+  },
+  {
+    image: [pLogo7]
+  },
+  {
+    image: [pLogo8]
   },
 ]
 
@@ -84,18 +124,15 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             <>
               <div className="flr-text-container text-center">
                 <h1 className="flr-hero-title">
-                  A Flair leva a moda ate ti de imediato.
+                  a nova forma de comprar moda online
                 </h1>
                 <p className="flr-hero-paragraph">
-                  A Flair é onde podes encontrar os teus novos artigos de moda,
-                  entregues a partir de uma grande e variada rede de lojas da
-                  tua cidade até à tua porta dentro de 2 horas. Tudo o que
-                  precisas para expressar o teu estilo, quando quiseres.
+                  A app com entregas económicas e imediatas em apenas <span className="rounded-full bg-main-blue-light text-white px-2 py-1">2 horas</span>
                 </p>
               </div>
               <div className="inline-block mt-16 sm:mt-24">
                 <span className="inline-block w-full text-xl sm:text-2xl mb-5 text-main-blue-light text-center font-medium">
-                  Em breve disponível para download.
+                  Disponível para download
                 </span>
               </div>
               <div className="flex flex-col w-full items-center justify-center sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -141,9 +178,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
                     alt={"Flair - App showcase"}
                     src={"../images/app_showcase.png"}
                     placeholder="none"
-                    transformOptions={{ fit: "contain" }}
+                    transformOptions={{ fit: "contain"}}
                     quality={100}
                     width={800}
+                    className="scale-[1.27]"
                   />
                 </Parallax>
                 <Parallax speed={5} style={{ gridArea: "1 / 1" }}>
@@ -162,50 +200,20 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           </Container>
         </Section>
 
-        <Section>
-          <Container className="flex flex-col sm:flex-row">
-            <>
-              <div
-                className="sm:basis-2/4 lg:basis-3/4 mb-14 sm:mb-0 sm:mr-10"
-                data-sal="slide-up"
-                data-sal-duration="500"
-                data-sal-easing="ease"
-              >
-                <StaticImage
-                  alt={"Flair - O que fazemos"}
-                  src={"../images/what_we_do.png"}
-                  placeholder="none"
-                  transformOptions={{ fit: "contain" }}
-                  quality={100}
-                  className="flr-container-override-left"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="flex flex-col sm:basis-2/4 justify-center items-start">
-                <Label className="text-main-blue">O que fazemos</Label>
-                <Title className="text-neutral-9" tag="h2">
-                  DAMOS ACESSO IMEDIATO AO MUNDO DA MODA
-                </Title>
-                <Paragraph className="text-neutral-7">
-                  Na Flair, podes comprar em várias das tuas lojas de moda
-                  locais favoritas num único pedido, por uma taxa fixa de
-                  entrega e receber a tua encomenda imediatamente e tudo de uma
-                  só vez, mesmo a tempo para o teu jantar de sexta-feira à
-                  noite, para ires a um festival ou para umas férias relaxantes
-                  de última hora.
-                </Paragraph>
-              </div>
-            </>
-          </Container>
-        </Section>
-
-        <Section type="full" className="bg-neutral-9">
+        <section className="relative bg-neutral-9 py-20"><StaticImage
+          className="flr-section-bg-img sm:max-h-[860px] opacity-100"
+          layout="fullWidth"
+          alt="Flair - A Flair leva a moda ate ti de imediato."
+          src={"../images/bg-pattern.png"}
+          formats={["auto", "webp", "avif"]}
+          quality={100}
+        />
           <Container className="flex flex-col items-center">
             <>
               <div className="flex flex-col items-center mb-6 sm:mb-14">
-                <Label className="text-main-purple">Porquê a Flair?</Label>
+                <Label className="text-main-purple">Benefícios da app</Label>
                 <Title tag="h2" className="text-neutral-0">
-                  Porque somos…
+                  O futuro está na Flair
                 </Title>
               </div>
               <Slider
@@ -215,153 +223,35 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
               />
             </>
           </Container>
-        </Section>
-
-        <Section>
-          <Container className="flex flex-col-reverse sm:flex-row">
-            <>
-              <div className="flex flex-col sm:flex-1 justify-center items-start sm:basis-2/4 mt-14 sm:mt-0 sm:mr-10">
-                <Label className="text-main-blue">Quem Somos</Label>
-                <Title className="text-neutral-9" tag="h2">
-                  Compra em múltiplas lojas
-                </Title>
-                <Paragraph className="text-neutral-7">
-                  Imaginamos cidades onde comprar as suas marcas de moda
-                  favoritas se torna uma realidade imediata. Fazemo-lo pelos
-                  nossos clientes, pelos nossos parceiros e pelas comunidades
-                  locais. Na Flair, o nosso objetivo é criar o futuro das
-                  compras de moda online.
-                </Paragraph>
-                <Button
-                  href="/sobre"
-                  label="Sobre nós"
-                  className="mt-8 self-center sm:self-auto"
-                />
-              </div>
-              <div
-                className="sm:basis-2/4 lg:basis-3/4 flex justify-end"
-                data-sal="slide-up"
-                data-sal-duration="500"
-                data-sal-easing="ease"
-              >
-                <StaticImage
-                  alt={"Flair - Quem Somos"}
-                  src={"../images/who_we_are.png"}
-                  placeholder="none"
-                  transformOptions={{ fit: "contain" }}
-                  quality={100}
-                  className="flr-container-override-right"
-                  objectFit="contain"
-                />
-              </div>
-            </>
-          </Container>
-        </Section>
-
-        <section className="flr-bg-section mt-10 sm:mt-20 bg-neutral-9">
-          <StaticImage
-            alt={"Experience Flair"}
-            src={"../images/header_4.jpg"}
-            placeholder="none"
-            transformOptions={{ fit: "cover" }}
-            quality={100}
-            className="flr-bg-image opacity-20"
-          />
-          <Container className="flr-bg-container py-24 sm:py-60 flex space-y-16 sm:space-y-0 sm:space-x-16 lg:space-x-40 flex-col sm:flex-row items-center sm:items-start">
-            <>
-              <div className="flex flex-col sm:basis-1/2 justify-center items-center sm:items-start text-center sm:text-left">
-                <Label tag="h2" className="text-neutral-0">
-                  Experimenta a Flair
-                </Label>
-                <Title
-                  tag="h3"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-main-turquoise via-main-purple to-main-blue"
-                >
-                  Ja abertos em Lisboa
-                </Title>
-                <Paragraph className="text-neutral-0 mb-5">
-                  Entra no mundo da moda "on-demand" e obtém acesso à forma mais
-                  fácil de fazer compras de moda online. Tudo o que precisas
-                  para expressar o teu estilo, de forma imediata. (consulta as
-                  condições nas Perguntas Frequentes)
-                </Paragraph>
-                <ModalJoin location={location} />
-              </div>
-              <div className="flex basis-1/2 flex-col justify-center items-center">
-                <span className="block text-6xl md:text-7xl lg:text-8xl mb-4 lg:mb-6 font-highlight text-transparent bg-clip-text bg-gradient-to-r from-main-turquoise via-main-purple to-main-blue">
-                  Desconto -10%
-                </span>
-                <div className="inline-block">
-                  <span className="inline-block w-full text-xl sm:text-2xl mb-5 text-main-turquoise text-center font-medium">
-                    Em breve disponível para download
-                  </span>
-                </div>
-                <div className="flex flex-col md:flex-row w-full items-center sm:justify-center space-y-4 md:space-y-0 md:space-x-4">
-                  <ButtonOutlineSquare href="https://play.google.com/store/games?device=windows">
-                    <>
-                      <img
-                        alt={"Social media icon - download no Google Play"}
-                        src={googleStore}
-                      />
-                      <div className="w-full">
-                        <span className="text-xs font-light">
-                          FAZ DOWNLOAD NO
-                        </span>
-                        <div className="text-2xl/[20px]">Google Play</div>
-                      </div>
-                    </>
-                  </ButtonOutlineSquare>
-                  <ButtonOutlineSquare href="https://www.apple.com/store">
-                    <>
-                      <img
-                        alt={"Social media icon - Download na Apple Store"}
-                        src={appleStore}
-                      />
-                      <div className="w-full">
-                        <span className="text-xs font-light">
-                          FAZ DOWNLOAD NA
-                        </span>
-                        <div className="text-2xl/[20px]">App Store</div>
-                      </div>
-                    </>
-                  </ButtonOutlineSquare>
-                </div>
-              </div>
-            </>
-          </Container>
         </section>
-
-        {/* <Section className="flr-footer-spacing">
-          <Container className="flex flex-col sm:flex-row">
-            <>
-            <div className="sm:basis-2/4 lg:basis-3/4 mb-14 sm:mb-0 sm:mr-10">
-              <StaticImage
-                alt={"Flair - O nosso Blog"}
-                src={"../images/our_blog.png"}
-                placeholder="none"
-                transformOptions={{ fit: "contain" }}
-                quality={100}
-                className="flr-container-override-left"
-                objectFit="contain"
-              />
-              </div>
-              <div className="flex flex-col sm:basis-2/4 justify-center">
-                <Label className="text-main-blue">O nosso Blog</Label>
-                <Title className="text-neutral-9" tag="h2">
-                  Explora a nossa curadoria
-                </Title>
-                <Paragraph className="text-neutral-7">
-                  Aqui é onde a magia acontece. Encontra informações exclusivas sobre as nossas coleções selecionadas, conhece mais sobre as nossas marcas e o motivo pelo qual achamos que se adequam a ti.
-                </Paragraph>
-                <Button
-                  href="/blog"
-                  label="O nosso Blog"
-                  className="mt-8"
-                />
-              </div>
-            </>
-          </Container>
-        </Section> */}
+        
+        <HalfBlock
+          image={whatWeDo}
+          label="Quem Somos"
+          title="O futuro das compras de moda online"
+          desc1="A Flair conecta o comércio local com o online, a nossa missão éoferecer o catálogo mais completo de produtos de moda da tua cidade."
+          desc2=" Ao melhor preço, com todo o conforto e confiança."
+          button={true}
+          btnHref="/sobre"
+          btnLabel="Sobre nós"
+          imgAlt=""
+          imgClass=""
+          className="sm:flex-row flex-col"
+          containerTextClass="items-start"
+          imgFit="contain"/>
+        
+        <Cta
+          label="Torna-te Parceiro"
+          title="Aumenta as vendas da tua loja sem investimento OU recursos extra"
+          btnHref="/"
+          btnLabel="SABER MAIS"/>
+        <BrandContainer
+          brandImages={brandImages}
+          button={true}
+          isCt={true}
+          label="Parcerias"
+          title="lojas parceiras" />
+        <DownloadApp />
       </>
     </Layout>
   )

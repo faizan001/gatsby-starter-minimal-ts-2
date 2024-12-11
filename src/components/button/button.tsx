@@ -2,7 +2,7 @@ import React from "react"
 
 interface Props {
   href?: string
-  label: string
+  label?: string
   className?: string
   size?: "sm" | "md"
   type?: "submit" | "button"

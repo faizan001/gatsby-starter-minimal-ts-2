@@ -12,19 +12,19 @@ interface Props {
 }
 
 const navigation = [
-  { name: "Início", href: "/" },
-  {
-    name: "Sobre nós",
-    href: "/sobre",
-  },
+  { name: "Home", href: "/" },
   {
     name: "Parcerias",
     href: "/parcerias",
   },
-  // {
-  //   name: "Stores",
-  //   href: "/lojas",
-  // },
+  {
+    name: "Lojas",
+    href: "/lojas",
+  },
+  {
+    name: "Sobre nós",
+    href: "/sobre",
+  },
   // { name: "Blog", href: "/blog" },
 ];
 

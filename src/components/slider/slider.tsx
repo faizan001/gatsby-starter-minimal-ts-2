@@ -31,6 +31,7 @@ interface Props {
     }
   }
   slides: Array<{
+    image?: string,
     title: string
     description: string
   }>
@@ -62,7 +63,7 @@ const Slider: React.FC<Props> = ({ options, slides, navHidesOn }) => {
               className={`keen-slider__slide number-slide${idx + 1}`}
               key={idx}
             >
-              <Card title={slide.title} description={slide.description} />
+              <Card image={slide.image} title={slide.title} description={slide.description} />
             </div>
           )
         })}
