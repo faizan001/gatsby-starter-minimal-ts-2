@@ -197,7 +197,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         </Section>
 
         <section className=" bg-neutral-9 py-20"><StaticImage
-          className="flr-section-bg-img sm:max-h-[860px] opacity-100 absolute"
+          className="flr-section-bg-img sm:max-h-[860px] opacity-100 absolute inset-0 w-full h-full object-cover opacity-100"
           layout="fullWidth"
           alt="Flair - A Flair leva a moda ate ti de imediato."
           src={"../images/bg-pattern.png"}

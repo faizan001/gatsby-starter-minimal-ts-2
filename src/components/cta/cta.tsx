@@ -20,7 +20,7 @@ const cta:React.FC<ctaProps> = ({title, label, btnLabel, btnHref, isBg, subHeadi
   return (
       <section className={`${isBg && isBg ? ' bg-main-blue-section-secondary py-20' : 'py-20'}`}>
           <StaticImage
-              className="flr-section-bg-img sm:max-h-[860px] opacity-100 z-10 absolute"
+              className="flr-section-bg-img sm:max-h-[860px] opacity-100 z-10 absolute inset-0 w-full h-full object-cover opacity-100"
               layout="fullWidth"
               alt="Flair - A Flair leva a moda ate ti de imediato."
               src={"../../images/bg-pattern.png"}
