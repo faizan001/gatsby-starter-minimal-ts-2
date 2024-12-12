@@ -218,7 +218,7 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
           </Container>
         </Section>
 
-        <section className=" bg-neutral-9 py-20"><StaticImage
+        <section className="relative bg-neutral-9 py-20"><StaticImage
           className="flr-section-bg-img sm:max-h-[860px] opacity-100 absolute"
           style={{position:"absolute"}}
           layout="fullWidth"
