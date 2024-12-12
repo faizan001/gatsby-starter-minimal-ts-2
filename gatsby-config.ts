@@ -29,9 +29,6 @@ const config: GatsbyConfig = {
           // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
-        gtagConfig: {
-      send_page_view: true, // Disables automatic pageview tracking
-       },
       pluginConfig: {
           head: true,
         },
