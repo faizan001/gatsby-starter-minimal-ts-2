@@ -132,7 +132,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
                 </span>
               </div>
               <div className="flex flex-col w-full items-center justify-center sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <ButtonOutlineSquare href="https://play.google.com/store/games?device=windows">
+                <ButtonOutlineSquare href="https://play.google.com/store/apps/details?id=com.emerge.customer&pli=1">
                   <>
                     <img
                       alt={"Social media icon - download no Google Play"}
@@ -146,7 +146,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
                     </div>
                   </>
                 </ButtonOutlineSquare>
-                <ButtonOutlineSquare href="https://www.apple.com/store">
+                <ButtonOutlineSquare href="https://apps.apple.com/us/app/flair-marketplace/id6464686316">
                   <>
                     <img
                       alt={"Social media icon - Download na Apple Store"}
@@ -232,7 +232,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           btnLabel="Sobre nós"
           imgAlt=""
           imgClass=""
-          className="sm:flex-row flex-col px-0 sm:px-0 lg:px-0"
+          isLeft={true}
+          className="sm:flex-row flex-col"
           containerTextClass="items-start"
           imgFit="contain" />
 

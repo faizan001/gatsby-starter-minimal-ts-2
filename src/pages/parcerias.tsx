@@ -254,6 +254,7 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
           btnLabel="JUNTA-TE A NÓS"
           imgAlt=""
           imgClass=""
+          isLeft={true}
           className="sm:flex-row flex-col"
           containerTextClass="items-start"
           imgFit="contain" />

@@ -145,6 +145,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           btnLabel="Visitar"
           imgAlt=""
           imgClass=""
+          isLeft={true}
           className="sm:flex-row flex-col"
           containerTextClass="items-start"
           imgFit="contain" />
@@ -159,6 +160,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           btnLabel="Visitar"
           imgAlt=""
           imgClass=""
+          isRight={true}
           className="sm:flex-row-reverse flex-col"
           containerTextClass="items-start"
           imgFit="contain" />
@@ -173,6 +175,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           btnLabel="Visitar"
           imgAlt=""
           imgClass=""
+          isLeft={true}
           className="sm:flex-row flex-col"
           containerTextClass="items-start"
           imgFit="contain" />
@@ -187,6 +190,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           btnLabel="Visitar"
           imgAlt=""
           imgClass=""
+          isRight={true}
           className="sm:flex-row-reverse flex-col"
           containerTextClass="items-start"
           imgFit="contain" />

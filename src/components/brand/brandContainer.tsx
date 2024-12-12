@@ -27,7 +27,7 @@ interface Props {
 const brandContainer: React.FC<Props> = ({ brandImages, className, button, title, label, desc, btnHref, btnLabel, isCt }) => {
     return (
         <Section className="relative bg-main-blue-100 py-20">
-            <Container className="flex flex-col items-center sm:ps-0 px-4 sm:px-0 lg:px-0 lg:ps-8 sm:ps-6">
+            <Container className="flex flex-col items-center" isBoth={true}>
                 <>
                     <div className="flex flex-col items-center mb-6 sm:mb-14">
                         <Label className="text-main-purple">{label}</Label>
@@ -65,8 +65,9 @@ const brandContainer: React.FC<Props> = ({ brandImages, className, button, title
                             button={false}
                             imgAlt="Flair - Ctt"
                             imgClass="flr-container-override-right"
-                            className="sm:flex-row  sm:flex-row-reverse flex-col sm:pe-0 px-0 sm:px-0 lg:px-0 lg:ps-0 sm:ps-0"
+                            className="sm:flex-row  sm:flex-row-reverse flex-col"
                             imgContainerClass="sm:basis-2/4 lg:basis-3/4 flex justify-end"
+                            isRight={true}
                             imgFit="contain" />
                     }
                 </>

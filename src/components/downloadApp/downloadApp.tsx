@@ -20,7 +20,7 @@ const downloadApp= () => {
                     <Title tag="h4" className="mb-0">GANHA 10% desconto</Title>
                     <Paragraph className="text-sm">Ganha 10% de desconto na primeira compra. </Paragraph>
                     <div className="flex flex-col md:flex-row w-full items-center sm:justify-start space-y-4 md:space-y-0 md:space-x-4 mt-5">
-                        <ButtonOutlineSquare href="https://play.google.com/store/games?device=windows">
+                            <ButtonOutlineSquare href="https://play.google.com/store/apps/details?id=com.emerge.customer&pli=1">
                             <>
                                 <img
                                     alt={"Social media icon - download no Google Play"}
@@ -34,7 +34,7 @@ const downloadApp= () => {
                                 </div>
                             </>
                         </ButtonOutlineSquare>
-                        <ButtonOutlineSquare href="https://www.apple.com/store">
+                            <ButtonOutlineSquare href="https://apps.apple.com/us/app/flair-marketplace/id6464686316">
                             <>
                                 <img
                                     alt={"Social media icon - Download na Apple Store"}
