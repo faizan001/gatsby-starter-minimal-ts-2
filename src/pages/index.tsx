@@ -3,17 +3,14 @@ import { HeadFC, type PageProps } from "gatsby"
 import { Layout } from "../components/layout/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import ButtonOutlineSquare from "../components/button/button_outline_square"
-import Button from "../components/button/button"
 import Section from "../components/structure/section"
 import Container from "../components/structure/container"
 import Title from "../components/text/title"
-import Paragraph from "../components/text/paragraph"
 import Label from "../components/text/label"
 import "keen-slider/keen-slider.min.css"
 import { SEO } from "../components/seo/seo"
 import { Parallax } from "react-scroll-parallax"
 import Slider from "../components/slider/slider"
-import ModalJoin from "../components/modal/modalJoin"
 import DownloadApp from "../components/downloadApp/downloadApp"
 import Cta from "../components/cta/cta"
 import googleStore from "../images/google-store.svg"
@@ -32,7 +29,6 @@ import pLogo6 from '../images/pl-6.png'
 import pLogo7 from '../images/pl-7.png'
 import pLogo8 from '../images/pl-8.png'
 import whatWeDo from "../images/what_we_do.png"
-import imgCtt from "../images/ctt-img.png"
 const sliderOptions = {
   initial: 0,
   slides: {
@@ -70,7 +66,7 @@ const sliderSlides = [
   {
     image: brand2,
     title: "Entrega económica",
-    description:"Compra em várias lojas, recebe só uma encomenda com a taxa única de 3,75€",
+    description: "Compra em várias lojas, recebe só uma encomenda com a taxa única de 3,75€",
   },
   {
     image: brand3,
@@ -178,10 +174,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
                     alt={"Flair - App showcase"}
                     src={"../images/app_showcase.png"}
                     placeholder="none"
-                    transformOptions={{ fit: "contain"}}
+                    transformOptions={{ fit: "contain" }}
                     quality={100}
                     width={800}
-                    className="scale-[1.27]"
+
                   />
                 </Parallax>
                 <Parallax speed={5} style={{ gridArea: "1 / 1" }}>
@@ -224,7 +220,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             </>
           </Container>
         </section>
-        
+
         <HalfBlock
           image={whatWeDo}
           label="Quem Somos"
@@ -236,15 +232,15 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           btnLabel="Sobre nós"
           imgAlt=""
           imgClass=""
-          className="sm:flex-row flex-col"
+          className="sm:flex-row flex-col px-0 sm:px-0 lg:px-0"
           containerTextClass="items-start"
-          imgFit="contain"/>
-        
+          imgFit="contain" />
+
         <Cta
           label="Torna-te Parceiro"
           title="Aumenta as vendas da tua loja sem investimento OU recursos extra"
           btnHref="/"
-          btnLabel="SABER MAIS"/>
+          btnLabel="SABER MAIS" />
         <BrandContainer
           brandImages={brandImages}
           button={true}

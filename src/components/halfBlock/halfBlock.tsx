@@ -1,7 +1,6 @@
 import React from 'react'
 import Container from '../structure/container'
 import Section from '../structure/section'
-import { getImage, StaticImage } from 'gatsby-plugin-image'
 import Label from '../text/label'
 import Title from '../text/title'
 import Paragraph from '../text/paragraph'
@@ -11,7 +10,7 @@ interface halfBlockProps {
     image: string,
     label?: string,
     title: string,
-    secondaryTitle?:string,
+    secondaryTitle?: string,
     desc1: string,
     desc2?: string
     button: boolean,
@@ -25,18 +24,18 @@ interface halfBlockProps {
     containerTextClass?: string
 }
 const halfBlock: React.FC<halfBlockProps> = ({ image, label, title, desc1, desc2, button, btnHref, btnLabel, secondaryTitle, imgAlt, imgClass, imgFit, className, imgContainerClass, containerTextClass }) => {
-    console.log(image,label)
-  return (
-      <Section>
-          <Container className={`flex gap-8 ${className ? ` ${className}` : ""}`}>
-              <>
-                  <div
-                      className={`${imgContainerClass ? `${imgContainerClass}` : ""}`}
-                      data-sal="slide-up"
-                      data-sal-duration="500"
-                      data-sal-easing="ease"
-                  >
-                      {/* {image && (
+    console.log(image, label)
+    return (
+        <Section className='w-full'>
+            <Container className={`flex ${className ? ` ${className}` : ""}`}>
+                <>
+                    <div
+                        className={`sm:basis-2/4 ${imgContainerClass ? `${imgContainerClass}` : ""}`}
+                        data-sal="slide-up"
+                        data-sal-duration="500"
+                        data-sal-easing="ease"
+                    >
+                        {/* {image && (
                           <StaticImage
                               alt={"Flair - O que fazemos"}
                               src={image}
@@ -47,40 +46,40 @@ const halfBlock: React.FC<halfBlockProps> = ({ image, label, title, desc1, desc2
                               objectFit="contain"
                               />
                       )} */}
-                      <img src={image} alt="" />
-                  </div>
-                  <div className={`flex flex-col sm:basis-2/4 justify-center ${containerTextClass ? containerTextClass : null}`}>
-                      {label &&
-                          <Label className="text-main-blue">{label}</Label>
-                      }
-                      <Title className="text-neutral-9" tag="h2">
-                        {title}
-                      </Title>
-                      <Paragraph className="text-neutral-7">
-                          {desc1}
-                      </Paragraph>
-                      {secondaryTitle && 
-                      <Paragraph className="text-main-purple font-semibold mt-3 uppercase">
-                         {secondaryTitle}
-                      </Paragraph>
-                      }
-                      {desc2 && 
-                      <Paragraph className="text-neutral-7">
-                         {desc2}
-                      </Paragraph>
-                      }
-                      {button && 
-                      <Button
-                          href={btnHref}
-                          label= {btnLabel}
-                          className="mt-8 self-center sm:self-auto"
-                      />
-                      }
-                  </div>
-              </>
-          </Container>
-      </Section>
-  )
+                        <img src={image} alt="block-img" className='max-w-[80%]' />
+                    </div>
+                    <div className={`flex flex-col sm:basis-2/4 justify-center ${containerTextClass ? containerTextClass : null}`}>
+                        {label &&
+                            <Label className="text-main-blue">{label}</Label>
+                        }
+                        <Title className="text-neutral-9" tag="h2">
+                            {title}
+                        </Title>
+                        <Paragraph className="text-neutral-7">
+                            {desc1}
+                        </Paragraph>
+                        {secondaryTitle &&
+                            <Paragraph className="text-main-purple font-semibold mt-3 uppercase">
+                                {secondaryTitle}
+                            </Paragraph>
+                        }
+                        {desc2 &&
+                            <Paragraph className="text-neutral-7">
+                                {desc2}
+                            </Paragraph>
+                        }
+                        {button &&
+                            <Button
+                                href={btnHref}
+                                label={btnLabel}
+                                className="mt-8 self-center sm:self-auto"
+                            />
+                        }
+                    </div>
+                </>
+            </Container>
+        </Section>
+    )
 }
 
 export default halfBlock

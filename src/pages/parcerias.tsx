@@ -157,7 +157,7 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
             src={"../images/parcerias.png"}
             formats={["auto", "webp", "avif"]}
             quality={100}
-            
+
           />
 
           <Container className="flr-hero-bg-container">
@@ -194,7 +194,7 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
                   </SubTitle>
                   <Paragraph className="text-neutral-7">
                     Agenda uma call e recebe um tablet em loja! Expande o teu alcance instantaneamente.
-                    A app Flair leva a tua loja a novas audiências onde os utilizadores compram em todas as suas lojas favoritas. 
+                    A app Flair leva a tua loja a novas audiências onde os utilizadores compram em todas as suas lojas favoritas.
                   </Paragraph>
                 </div>
                 <div className="basis-1/3">
@@ -257,16 +257,16 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
           className="sm:flex-row flex-col"
           containerTextClass="items-start"
           imgFit="contain" />
-        
-        
+
+
         <BrandContainer
           brandImages={brandImages}
           button={false}
           isCt={false}
-          label="Torna-te Parceiro"
+          label="Sistemas Operativos"
           desc="Se o teu POS (sistema operativo) não está listado abaixo, entra em contacto connosco!"
           title="Integra a tua loja na flair de forma imediata" />
-        <Cta title={"Torna-te Parceiro"} label={"grátis 3 meses sem fidelizações"} btnLabel={"JUNTA-TE A NÓS"} btnHref={"/"} />
+        <Cta label={"Torna-te Parceiro"} subHeading="O fee mais competitivo do mercado é exclusivo para parceiros Flair" isBg={true} title={"grátis 3 meses sem fidelizações"} btnLabel={"JUNTA-TE A NÓS"} btnHref={"/"} />
         <BrandContainer
           brandImages={mainBrands}
           button={true}
@@ -293,16 +293,14 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
                     {({ open }) => (
                       <>
                         <div
-                          className={`border-neutral-6 border-b ${
-                            i !== 0 ? "pt-12 pb-8" : "pb-8"
-                          }`}
+                          className={`border-neutral-6 border-b ${i !== 0 ? "pt-12 pb-8" : "pb-8"
+                            }`}
                         >
                           <Disclosure.Button className="flex w-full justify-between text-left">
                             <SubTitle tag="h3">{faq.title}</SubTitle>
                             <ChevronUpIcon
-                              className={`${
-                                open ? "" : "rotate-180 transform"
-                              } h-8 w-8 text-neutral-0 font-bold`}
+                              className={`${open ? "" : "rotate-180 transform"
+                                } h-8 w-8 text-neutral-0 font-bold`}
                             />
                           </Disclosure.Button>
                           <Disclosure.Panel className="">

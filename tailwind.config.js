@@ -32,7 +32,9 @@ module.exports = {
       colors: {
         "main-blue": "#2649f3",
         "main-blue-light": "#5670fa",
+        "main-blue-secondary-light": "#5F80FD",
         "main-blue-100": "#e2e5ed",
+        "main-blue-section-secondary": "#283FF8",
         "main-purple": "#7861f7",
         "main-turquoise": "#1ce6fd",
         "neutral-0": "#ffffff",

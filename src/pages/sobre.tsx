@@ -7,9 +7,10 @@ import Section from "../components/structure/section"
 import Label from "../components/text/label"
 import Title from "../components/text/title"
 import Paragraph from "../components/text/paragraph"
-import { Disclosure } from "@headlessui/react"
 import { SEO } from "../components/seo/seo"
-
+import HalfBlock from "../components/halfBlock/halfBlock"
+import DownloadApp from "../components/downloadApp/downloadApp"
+import torana from "../images/torana.png"
 const values = [
   {
     title: "INOVAÇÃO",
@@ -42,46 +43,39 @@ const AboutPage: React.FC<PageProps> = ({ location }) => {
             className="flr-hero-bg-image opacity-40 max-h-[500px]"
             layout="fullWidth"
             alt="Flair - Quem somos"
-            src={"../images/header_5.jpg"}
+            src={"../images/sobre-header.png"}
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
           <Container className="flr-hero-bg-container">
             <div className="flr-text-container text-center">
-              <h1 className="flr-hero-title">QUEM SOMOS</h1>
-              <p className="flr-hero-paragraph">
-                A Flair é onde consegues comprar os teus novos artigos de moda
-                entregues de qualquer loja da tua cidade, diretamente à tua
-                porta dentro de apenas 2 horas. Tudo o que precisas para
-                expressar o teu estilo, quando quiseres.
+              <h1 className="flr-hero-title">Sobre nós</h1>
+              <p className="flr-custom-text-container">
+                A nossa missão é oferecer o catálogo de moda mais completo da tua cidade, com entregas económicas e imediatas em apenas 2 horas.
               </p>
             </div>
           </Container>
         </section>
 
         <Section>
-          <Container>
-            <div className="flr-text-container m-auto flex flex-col ">
+          <Container className="w-full sm:w-[900px] ">
+            <div className="flr-text-container m-auto flex flex-col">
               <div className="mb-10">
                 <Label className="text-main-blue">Sobre nós</Label>
                 <Title className="text-neutral-9" tag="h2">
-                  A Flair Limitada é o primeiro marketplace de entrega
-                  “on-demand” para a indústria da moda na Europa.A nossa missão
-                  é tornarmo-nos a principal plataforma de última geração para
-                  os apaixonados por moda, ligando vendedores, estilistas e
-                  consumidores de formas inovadoras e inexploradas.
+                  A Flair conecta as lojas de moda locais com o comercio online.
                 </Title>
                 <Paragraph className="text-neutral-7">
-                  Fundada em 2022 por Miguel Amaral e Duarte Schedel e lançada
-                  em 2023, a Flair Marketplace liga os clientes a artigos de
-                  mais de (X) boutiques de moda locais e mais de (X) das
-                  melhores marcas do mundo, proporcionando a experiência de
-                  compra mais exclusiva, dando ainda acesso a uma extensa
-                  seleção de produtos de moda e & lifestyle disponíveis para
-                  entrega imediata.
+                  Imaginamos cidades onde comprar moda online se tornou uma realidade “get it now”. Fazemo-lo pelos nossos clientes, oferecendo-lhes a forma mais fácil de comprar moda online.
+                </Paragraph>
+                <Paragraph className="text-neutral-7 my-3">
+                  Capacitamos as nossas lojas parceiras com uma ferramenta destinada a promover relevância para as suas marcas e para a indústria da moda, promovendo um modelo operacional, logístico e de entregas mais eficiente.
+                </Paragraph>
+                <Paragraph className="text-neutral-7">
+                  A nossa ambição é tornarmo-nos o principal destino de compras para todos os apaixonados da moda. Desde um hoodie casual para o dia a dia a um vestido de luxo para um casamento, seja qual for a situação ou o momento. Com a Flair já podes expressar o teu estilo sempre que quiseres.
                 </Paragraph>
               </div>
-              <Disclosure>
+              {/* <Disclosure>
                 {({ open }) => (
                   <>
                     <Disclosure.Panel className="text-gray-500">
@@ -125,7 +119,7 @@ const AboutPage: React.FC<PageProps> = ({ location }) => {
                     </Disclosure.Button>
                   </>
                 )}
-              </Disclosure>
+              </Disclosure> */}
             </div>
           </Container>
         </Section>
@@ -137,8 +131,8 @@ const AboutPage: React.FC<PageProps> = ({ location }) => {
         >
           <Container>
             <>
-              <Title tag="h2" className="text-center">
-                OS NOSSOS VALORES
+              <Title tag="h2" className="text-center text-main-blue-secondary-light">
+                A revolução do mundo da moda está apenas a começar
               </Title>
 
               <div className="mt-14 sm:mt-28">
@@ -147,9 +141,8 @@ const AboutPage: React.FC<PageProps> = ({ location }) => {
                   return (
                     <div
                       key={i}
-                      className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:justify-end${
-                        isEven ? "" : " sm:flex-row-reverse"
-                      }${i === 0 ? "" : " mt-10"}`}
+                      className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:justify-end${isEven ? "" : " sm:flex-row-reverse"
+                        }${i === 0 ? "" : " mt-10"}`}
                     >
                       {/* counter */}
                       <div className="sm:basis-1/3 flex justify-center">
@@ -174,16 +167,14 @@ const AboutPage: React.FC<PageProps> = ({ location }) => {
                         data-sal-easing="ease"
                       >
                         <h3
-                          className={`text-4xl md:text-[44px] lg:text-6xl font-highlight text-center mb-3 sm:mb-6 ${
-                            isEven ? " sm:text-left" : " sm:text-right"
-                          }`}
+                          className={`text-4xl md:text-[44px] lg:text-6xl font-highlight text-center mb-3 sm:mb-6 ${isEven ? " sm:text-left" : " sm:text-right"
+                            }`}
                         >
                           {value.title}
                         </h3>
                         <Paragraph
-                          className={`text-neutral-4${
-                            isEven ? " sm:text-left" : " sm:text-right"
-                          }`}
+                          className={`text-neutral-4${isEven ? " sm:text-left" : " sm:text-right"
+                            }`}
                         >
                           {value.description}
                         </Paragraph>
@@ -195,49 +186,20 @@ const AboutPage: React.FC<PageProps> = ({ location }) => {
             </>
           </Container>
         </Section>
-
-        <Section id="culture" className="flr-footer-spacing flr-anchor-target">
-          <Container className="flex flex-col md:flex-row">
-            <>
-              <div
-                className="sm:basis-2/4 lg:basis-3/4 mb-14 sm:mb-0 sm:mr-10"
-                data-sal="slide-up"
-                data-sal-duration="500"
-                data-sal-easing="ease"
-              >
-                <StaticImage
-                  alt={"Flair - A Nossa Cultura"}
-                  src={"../images/corporate_culture.png"}
-                  placeholder="none"
-                  transformOptions={{ fit: "contain" }}
-                  quality={100}
-                  className="flr-container-override-left"
-                  objectFit="contain"
-                />
-              </div>
-              <div className="sm:basis-2/4 flex flex-col justify-center">
-                <Label className="text-main-blue">A Nossa Cultura</Label>
-                <Title className="text-neutral-9" tag="h2">
-                  O mercado da moda é um dos mercados globais de consumo mais
-                  atrativos.
-                </Title>
-                <Paragraph className="text-neutral-7">
-                  A indústria está em constante evolucao devido à digitalização
-                  do consumo, interrupções na cadeia de fornecimento,
-                  prioridades ambientais, e novas tecnologias que ligam todos os
-                  envolventes no ecossistema da moda. Na Flair, o nosso
-                  propósito de revolucionar a moda para o benefício dos
-                  clientes, parceiros e comunidades locais impulsiona-nos a
-                  procurar constantemente novas formas de tornar o mundo da moda
-                  mais inteligente, amigável, aberto e ecológico. Cultivamos uma
-                  mentalidade baseada em quatro princípios fundamentais: foco no
-                  cliente; pensamento inovador; ecossistema de parcerias; e
-                  espírito de equipa.
-                </Paragraph>
-              </div>
-            </>
-          </Container>
-        </Section>
+        <HalfBlock
+          image={torana}
+          label="Torna-te Parceiro"
+          title="Alcança novos clientes e aumenta as vendas da tua loja com o nosso servico"
+          desc1="As lojas só precisam de uma conexão à internet, um sistema de ponto de venda (POS) e de escolher quais produtos que desejam vender no nosso marketplace. A Flair trata do software, conteúdo online, serviços de pagamento, serviço ao cliente, suporte pós-venda e apoio geral. Sem taxas adicionais, os vendedores só pagam pelo que vendem."
+          button={true}
+          btnHref="/"
+          btnLabel="SABER MAIS"
+          imgAlt=""
+          imgClass=""
+          className="sm:flex-row flex-col sm:ps-0 px-4 sm:px-0 lg:px-0 lg:pe-8 sm:pe-6"
+          containerTextClass="items-start"
+          imgFit="contain" />
+        <DownloadApp />
       </>
     </Layout>
   )

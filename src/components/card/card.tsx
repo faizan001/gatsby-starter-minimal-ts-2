@@ -19,11 +19,12 @@ const Card: React.FC<Props> = ({ title, description, image, className }) => {
     >
       {image && (
         <div className="sm:translate-y-[30px] sm:group-hover:translate-y-0 sm:transition-all sm:duration-500">
-          <img src={image} alt="hello" />
+          <img src={image} alt="card-image" className="max-w-[100px]" />
         </div>
       )}
       <Title
-        tag="h3"
+        tag="h6"
+        card={true}
         className="text-neutral-0 text-center sm:translate-y-[35px] sm:group-hover:translate-y-0 sm:transition-all sm:duration-500"
       >
         {title}

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import Container from "../structure/container";
 import Paragraph from "../text/paragraph";
 import logo from "../../images/logo.svg";
-import DownloadApp from "../downloadApp/downloadApp";
 const Footer: React.FC = () => {
   const [formError, setFormError] = useState<null | string>(null);
   const [formSubmited, setFormSubmited] = useState(false);
@@ -76,7 +74,7 @@ const Footer: React.FC = () => {
                     Enviar
                   </button>
                 </div>
-                <div className="flex flex-col justify-start justify-between w-full text-neutral-5 mt-3 absolute -bottom-16 z-10">
+                {/* <div className="flex flex-col justify-start justify-between w-full text-neutral-5 mt-3 absolute -bottom-16 z-10">
                   <label>
                     <input
                       type="checkbox"
@@ -96,15 +94,48 @@ const Footer: React.FC = () => {
                     {formSubmited && "We are now connected, thank you"}
                     {formError && formError}
                   </span>
-                </div>
+                </div> */}
               </form>
             </div>
             <div className="flex flex-col sm:flex-row items-start sm:flex-row space-y-5 sm:space-y-0 text-neutral-5 text-center sm:text-left items-center sm:items-start">
+              <div className="basis-1/3 space-y-2">
+                <Paragraph>
+                  <Link
+                    className="hover:text-neutral-6 text-neutral-3 transition-all"
+                    to="/"
+                  >
+                    Home
+                  </Link>
+                </Paragraph>
+                <Paragraph>
+                  <Link
+                    className="hover:text-neutral-6 text-neutral-3 transition-all"
+                    to="/parcerias"
+                  >
+                    Parcerias
+                  </Link>
+                </Paragraph>
+                <Paragraph>
+                  <Link
+                    className="hover:text-neutral-6 text-neutral-3 transition-all"
+                    to="/lojas"
+                  >
+                    Lojas
+                  </Link>
+                </Paragraph>
+                <Paragraph>
+                  <Link
+                    className="hover:text-neutral-6 text-neutral-3 transition-all"
+                    to="/sobre"
+                  >
+                    Sobre nós
+                  </Link>
+                </Paragraph>
+              </div>
               <div className="basis-1/4 space-y-2">
-                <Paragraph className="font-bold">Flair Limitada</Paragraph>
                 <Paragraph>
                   <a
-                    className="hover:text-neutral-6 transition-all"
+                    className="hover:text-neutral-6 text-neutral-3 transition-all"
                     href="/Termos.pdf"
                     target="_blank"
                   >
@@ -113,7 +144,7 @@ const Footer: React.FC = () => {
                 </Paragraph>
                 <Paragraph>
                   <a
-                    className="hover:text-neutral-6 transition-all"
+                    className="hover:text-neutral-6 text-neutral-3 transition-all"
                     href="/Política_de_Privacidade.pdf"
                     target="_blank"
                   >
@@ -122,117 +153,15 @@ const Footer: React.FC = () => {
                 </Paragraph>
                 <Paragraph>
                   <Link
-                    className="hover:text-neutral-6 transition-all"
+                    className="hover:text-neutral-6 text-neutral-3 transition-all"
                     to="/cookie-policy"
                   >
                     Política de Cookies
                   </Link>
                 </Paragraph>
               </div>
-
-              <div className="basis-1/4 space-y-2">
-                <Paragraph className="font-bold">Sobre</Paragraph>
-                <Paragraph>
-                  <Link
-                    className="hover:text-neutral-6 transition-all"
-                    to="/sobre"
-                  >
-                    Sobre nós
-                  </Link>
-                </Paragraph>
-                <Paragraph>
-                  <Link
-                    className="hover:text-neutral-6 transition-all"
-                    to="/sobre#values"
-                  >
-                    Os nossos valores
-                  </Link>
-                </Paragraph>
-                <Paragraph>
-                  <Link
-                    className="hover:text-neutral-6 transition-all"
-                    to="/sobre#culture"
-                  >
-                    A nossa cultura
-                  </Link>
-                </Paragraph>
-              </div>
-              <div className="basis-1/4 space-y-2">
-                <Paragraph className="font-bold">Marcas e Lojas</Paragraph>
-                {/* <Paragraph>
-                  <Link
-                    className="hover:text-neutral-6 transition-all"
-                    to="/lojas"
-                  >
-                    Lista de lojas
-                  </Link>
-                </Paragraph> */}
-                <Paragraph>
-                  <Link
-                    className="hover:text-neutral-6 transition-all"
-                    to="/parcerias"
-                  >
-                    Parcerias
-                  </Link>
-                </Paragraph>
-              </div>
-              <div className="basis-1/4">
-                {/* <div className="space-y-2">
-                  <Paragraph className="font-bold">Blog</Paragraph>
-                  <Paragraph>
-                    <Link className="hover:text-neutral-6 transition-all" to="/blog">As nossas coleções</Link>
-                  </Paragraph>
-                </div> */}
-                {/* <div className="space-y-2">
-                  <Paragraph className="font-bold">Segue-nos</Paragraph>
-                  <div className="flex space-x-4 justify-center sm:justify-start">
-                    <a
-                      href="https://www.facebook.com"
-                      target="_blank"
-                      className="rounded-full hover:opacity-80 transition-all"
-                    >
-                      <StaticImage
-                        className="w-[32px] h-[32px]"
-                        alt="Flair Facebook"
-                        src="../../images/facebook.svg"
-                        placeholder="none"
-                        transformOptions={{ fit: "contain" }}
-                        quality={100}
-                      />
-                    </a>
-                    <a
-                      href="https://www.instagram.com"
-                      target="_blank"
-                      className="rounded-full hover:opacity-80 transition-all"
-                    >
-                      <StaticImage
-                        className="w-[32px] h-[32px]"
-                        alt="Flair Instagram"
-                        src="../../images/instagram.svg"
-                        placeholder="none"
-                        transformOptions={{ fit: "contain" }}
-                        quality={100}
-                      />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com"
-                      target="_blank"
-                      className="rounded-full hover:opacity-80 transition-all"
-                    >
-                      <StaticImage
-                        className="w-[32px] h-[32px]"
-                        alt="Flair Linkedin"
-                        src="../../images/linkedin.svg"
-                        placeholder="none"
-                        transformOptions={{ fit: "contain" }}
-                        quality={100}
-                      />
-                    </a>
-                  </div>
-                </div> */}
-              </div>
             </div>
-            <div className="flex flex-col items-center sm:flex-row space-y-5 sm:space-y-0 sm:justify-between sm:items-end">
+            <div className="flex flex-col border-solid border-t-[1px] border-t-gray-400 pt-5 items-center sm:flex-row space-y-5 sm:space-y-0 sm:justify-between sm:items-end">
               <Link to="/" className="flex flex-shrink-0 items-center">
                 <img
                   className="block w-auto"

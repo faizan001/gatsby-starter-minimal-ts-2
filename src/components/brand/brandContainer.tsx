@@ -6,6 +6,7 @@ import imgCtt from "../../images/ctt-img.png"
 import Label from "../text/label"
 import Title from "../text/title"
 import Paragraph from "../text/paragraph"
+import Section from "../structure/section"
 
 interface ImageItem {
     image: string[]; // Each item has an array of image URLs
@@ -25,21 +26,21 @@ interface Props {
 
 const brandContainer: React.FC<Props> = ({ brandImages, className, button, title, label, desc, btnHref, btnLabel, isCt }) => {
     return (
-        <section className="relative bg-main-blue-100 py-20">
-          <Container className="flex flex-col items-center">
-            <>
-              <div className="flex flex-col items-center mb-6 sm:mb-14">
-                <Label className="text-main-purple">{label}</Label>
-                <Title tag="h2" className="text-neutral-9">
-                  {title}
-                </Title>
-                {desc &&
-                    <Paragraph className="text-neutral-7">{desc}</Paragraph>
-                }
-              </div>
-              <div className="flex flex-wrap justify-center items-center">
+        <Section className="relative bg-main-blue-100 py-20">
+            <Container className="flex flex-col items-center sm:ps-0 px-4 sm:px-0 lg:px-0 lg:ps-8 sm:ps-6">
+                <>
+                    <div className="flex flex-col items-center mb-6 sm:mb-14">
+                        <Label className="text-main-purple">{label}</Label>
+                        <Title tag="h2" className="text-neutral-9 text-center w-full sm:w-[500px]">
+                            {title}
+                        </Title>
+                        {desc &&
+                            <Paragraph className="text-neutral-7">{desc}</Paragraph>
+                        }
+                    </div>
+                    <div className="flex flex-wrap justify-center items-center gap-8">
                         {brandImages && brandImages.length > 0 && brandImages.map((item, index) => (
-                            <div key={index} className="sm:translate-y-[30px] sm:group-hover:translate-y-0 sm:transition-all sm:duration-500 items-center justify-center flex p-4">
+                            <div key={index} className="sm:w-1/6 w-1/3 sm:translate-y-[30px] sm:group-hover:translate-y-0 sm:transition-all sm:duration-500 items-center justify-center flex p-4">
                                 {Array.isArray(item.image) && item.image.length > 0 ? (
                                     <img src={item.image[0]} alt={`Brand Image ${index + 1}`} />
                                 ) : (
@@ -64,13 +65,13 @@ const brandContainer: React.FC<Props> = ({ brandImages, className, button, title
                             button={false}
                             imgAlt="Flair - Ctt"
                             imgClass="flr-container-override-right"
-                            className="sm:flex-row  sm:flex-row-reverse flex-col"
+                            className="sm:flex-row  sm:flex-row-reverse flex-col sm:pe-0 px-0 sm:px-0 lg:px-0 lg:ps-0 sm:ps-0"
                             imgContainerClass="sm:basis-2/4 lg:basis-3/4 flex justify-end"
                             imgFit="contain" />
                     }
-            </>
-          </Container>
-        </section>
+                </>
+            </Container>
+        </Section>
     )
 }
 

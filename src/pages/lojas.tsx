@@ -191,7 +191,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           containerTextClass="items-start"
           imgFit="contain" />
       </>
-      </Layout>
+    </Layout>
   )
 }
 
