@@ -22,18 +22,18 @@ const config: GatsbyConfig = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-google-gtag",
-        trackingIds: [
+  //  {
+  //    resolve: "gatsby-plugin-google-gtag",
+  //      trackingIds: [
           "GTM-PT5T3B8Q", // Google Analytics / GA OLD= G-PX5VQR8D62
           // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
-        ],
-      pluginConfig: {
-          head: true,
-        },
-      },
-    },
+   //     ],
+  //    pluginConfig: {
+   //       head: true,
+   //     },
+  //    },
+ //   },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
