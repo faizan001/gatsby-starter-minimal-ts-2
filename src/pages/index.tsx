@@ -197,10 +197,16 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             </>
           </Container>
         </Section>
-
-        <section className=" bg-neutral-9 py-20">
-          <SectionBgImage>
-            <Container className="flex flex-col items-center">
+        <section className="grid bg-neutral-9 py-20">
+          <StaticImage
+            className="flr-hero-bg-image sm:max-h-[760px] opacity-40"
+            layout="fullWidth"
+            alt="Flair - A Flair leva a moda ate ti de imediato."
+            src={"../images/bg-pattern.png"}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+          <Container className="flex flex-col items-center flr-hero-bg-container">
             <>
               <div className="flex flex-col items-center mb-6 sm:mb-14">
                 <Label className="text-main-purple">Benefícios da app</Label>
@@ -214,8 +220,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
                 navHidesOn="min-[1200px]:hidden"
               />
             </>
-            </Container>
-          </SectionBgImage>
+          </Container>
         </section>
         
         <HalfBlock
