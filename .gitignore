@@ -1,2 +1,5 @@
 node_modules/
-package-lock.json
+.cache/
+public
+src/gatsby-types.d.ts
+.env*
