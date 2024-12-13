@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
     title: `Flair - Get your fashion items delivered to your door-step within 2 hours`,
     description: `Flair is where you can get your new fashion items delivered from wherever in town a store is located to you door-step within 2 hours.`,
     image: `/app_showcase.png`,
-    siteUrl: `https://www.flair-marketplace.com`,
+    siteUrl: `https://comforting-nougat-f02f07.netlify.app/`,
     keywords: `Fashion delivery, 2-hour delivery service, Local fashion stores, Flair app, Express your style, Fashion items, Fixed delivery fee, Immediate refunds, Fashion shopping, Local delivery, Door-step delivery, Free returns,`,
     author: `@flair`,
   },
