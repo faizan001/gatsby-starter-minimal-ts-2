@@ -18,6 +18,9 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
+    "@parcel/watcher": "^2.5.0",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
     "autoprefixer": "^10.4.14",
     "flair-website": "file:",
     "gatsby": "^5.11.0",
