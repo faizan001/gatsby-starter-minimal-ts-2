@@ -8,10 +8,9 @@ interface Props {
   className?: string
   children: JSX.Element
   type?: "normal" | "full"
-  image: string
 }
 
-const SectionBgImage: React.FC<Props> = ({ className, children, type, image }) => {
+const SectionBgImage: React.FC<Props> = ({ className, children, type }) => {
   const sectionType =
     type === "full" ? "py-20 my-10 sm:py-40 sm:my-20" : "py-10 sm:py-20"
   const { placeholderImage } = useStaticQuery(
