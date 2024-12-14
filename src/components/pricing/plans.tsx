@@ -4,7 +4,6 @@ import Container from '../structure/container'
 import Label from '../text/label'
 import Paragraph from '../text/paragraph'
 import Title from '../text/title'
-import Button from '../button/button'
 import ModalPartner from '../modal/modalPartner'
 
 const plans = () => {
@@ -41,7 +40,7 @@ const plans = () => {
                                     <Paragraph className='text-neutral-9 mx-4 p-4 m-0'>Incluido o transporte e segurovia CTT</Paragraph>
                                 </div>
                             </div>
-                            <div className="flex w-full justify-center sm:justify-start">
+                            <div className="flex w-full justify-center mt-10">
                                 <ModalPartner
                                     location={location}
                                     buttonLabel="Aderir"
@@ -69,7 +68,7 @@ const plans = () => {
                                     <Paragraph className='text-neutral-9 mx-4 p-4 m-0'>Incluido o transporte e segurovia CTT</Paragraph>
                                 </div>
                             </div>
-                            <div className="flex w-full justify-center sm:justify-start">
+                            <div className="flex w-full justify-center mt-10">
                                 <ModalPartner
                                     location={location}
                                     buttonLabel="Aderir"
@@ -96,7 +95,7 @@ const plans = () => {
                                     <Paragraph className='text-neutral-9 mx-4 p-4 m-0'>Incluido o transporte e segurovia CTT</Paragraph>
                                 </div>
                             </div>
-                            <div className="flex w-full justify-center sm:justify-start">
+                            <div className="flex w-full justify-center mt-10">
                                 <ModalPartner
                                     location={location}
                                     buttonLabel="Aderir"

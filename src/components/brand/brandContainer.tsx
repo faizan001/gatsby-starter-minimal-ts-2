@@ -42,7 +42,9 @@ const brandContainer: React.FC<Props> = ({ brandImages, className, button, title
                         {brandImages && brandImages.length > 0 && brandImages.map((item, index) => (
                             <div key={index} className="sm:w-1/6 w-1/3 sm:translate-y-[30px] sm:group-hover:translate-y-0 sm:transition-all sm:duration-500 items-center justify-center flex p-4">
                                 {Array.isArray(item.image) && item.image.length > 0 ? (
-                                    <img src={item.image[0]} alt={`Brand Image ${index + 1}`} />
+                                    <img src={item.image[0]} alt={`Brand Image ${index + 1}`} data-sal="flip-down"
+                                        data-sal-duration="1800"
+                                        data-sal-easing="ease" />
                                 ) : (
                                     <img src="default-image-path.jpg" alt={`Default Image ${index + 1}`} /> // Fallback image
                                 )}

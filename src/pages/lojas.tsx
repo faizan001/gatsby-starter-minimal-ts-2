@@ -8,6 +8,8 @@ import { SEO } from "../components/seo/seo"
 import HalfBlock from "../components/halfBlock/halfBlock"
 import lacohoix from "../images/lacohoix.png"
 import erica from "../images/erica.png"
+import pLogo1 from "../images/pl-1.png"
+import pLogo2 from "../images/pl-2.png"
 const storesData: {
   locations: {
     [key: string]: {
@@ -148,6 +150,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           isLeft={true}
           className="sm:flex-row flex-col"
           containerTextClass="items-start"
+          brandImage={pLogo1}
           imgFit="contain" />
         <HalfBlock
           image={erica}
@@ -163,6 +166,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           isRight={true}
           className="sm:flex-row-reverse flex-col"
           containerTextClass="items-start"
+          brandImage={pLogo2}
           imgFit="contain" />
         <HalfBlock
           image={lacohoix}
@@ -178,6 +182,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           isLeft={true}
           className="sm:flex-row flex-col"
           containerTextClass="items-start"
+          brandImage={pLogo1}
           imgFit="contain" />
         <HalfBlock
           image={erica}
@@ -193,6 +198,7 @@ const StoresPage: React.FC<PageProps> = ({ location }) => {
           isRight={true}
           className="sm:flex-row-reverse flex-col"
           containerTextClass="items-start"
+          brandImage={pLogo2}
           imgFit="contain" />
       </>
     </Layout>

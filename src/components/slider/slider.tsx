@@ -52,7 +52,7 @@ const Slider: React.FC<Props> = ({ options, slides, navHidesOn }) => {
   })
 
   return (
-    <div className="w-full">
+    <div className="w-full grid sm:flex">
       <div
         ref={sliderRef}
         className="keen-slider cursor-grab min-[1200px]:cursor-default"

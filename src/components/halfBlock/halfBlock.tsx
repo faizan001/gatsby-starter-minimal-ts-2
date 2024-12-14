@@ -24,14 +24,16 @@ interface halfBlockProps {
     containerTextClass?: string
     isLeft?: boolean
     isRight?: boolean
+    isHideOnHover?: boolean
+    brandImage?: string
 }
-const halfBlock: React.FC<halfBlockProps> = ({ image, label, title, desc1, desc2, button, btnHref, btnLabel, isLeft, isRight, secondaryTitle, imgAlt, imgClass, imgFit, className, imgContainerClass, containerTextClass }) => {
+const halfBlock: React.FC<halfBlockProps> = ({ image, label, title, desc1, desc2, button, btnHref, btnLabel, isLeft, isRight, secondaryTitle, imgAlt, imgClass, imgFit, className, imgContainerClass, containerTextClass, isHideOnHover, brandImage }) => {
     return (
         <Section className='w-full'>
             <Container isLeft={isLeft} isRight={isRight} className={`flex ${className ? ` ${className}` : ""}`}>
                 <>
                     <div
-                        className={`sm:basis-2/4 ${imgContainerClass ? `${imgContainerClass}` : ""}`}
+                        className={`sm:basis-2/4 grid ${imgContainerClass ? `${imgContainerClass}` : ""}`}
                         data-sal="slide-up"
                         data-sal-duration="500"
                         data-sal-easing="ease"
@@ -47,7 +49,16 @@ const halfBlock: React.FC<halfBlockProps> = ({ image, label, title, desc1, desc2
                               objectFit="contain"
                               />
                       )} */}
-                        <img src={image} alt="block-img" />
+                        <div className={`${brandImage && 'flr-section-bg-image'}`}>
+                            <img src={image} alt="block-img" />
+                        </div>
+                        {brandImage &&
+                            <div className='flr-section-bg-container' data-sal="flip-up"
+                                data-sal-duration="1500"
+                                data-sal-easing="ease">
+                                <img src={brandImage} className={`max-w-[140px] sm:max-w-[200px] ${isLeft && isLeft && isHideOnHover ? 'hover:opacity-0 sm:transition-all duration-500 sm:me-[135px] me-[100px]' : isRight && isRight ? 'ms-[135px] ms-[100]' : 'sm:me-[135px] me-[100px]'}`} />
+                            </div>
+                        }
                     </div>
                     <div className={`flex flex-col sm:basis-2/4 justify-center px-10 ${containerTextClass ? containerTextClass : null}`}>
                         {label &&

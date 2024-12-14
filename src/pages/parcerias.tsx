@@ -53,7 +53,7 @@ const faqs = [
 const sliderOptions = {
   initial: 0,
   slides: {
-    perView: 4.2,
+    perView: 4,
     spacing: 25,
   },
   breakpoints: {
@@ -218,15 +218,16 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
           </Container>
         </Section>
 
-        <section className="grid bg-neutral-9"><StaticImage
-          className="flr-section-bg-image sm:max-h-[860px] opacity-100"
-          layout="fullWidth"
-          alt="Flair - A Flair leva a moda ate ti de imediato."
-          src={"../images/bg-pattern.png"}
-          formats={["auto", "webp", "avif"]}
-          quality={100}
-        />
-          <Container className="flex flex-col items-center flr-section-bg-container">
+        <section className="grid py-10 sm:py-0 bg-neutral-9 overflow-x-hidden">
+          <StaticImage
+            className="flr-section-bg-image sm:max-h-[760px] opacity-40"
+            layout="fullWidth"
+            alt="Flair - A Flair leva a moda ate ti de imediato."
+            src={"../images/bg-pattern.png"}
+            formats={["auto", "webp", "avif"]}
+            quality={100}
+          />
+          <Container className="flex flex-col items-center justify-center flr-section-bg-container">
             <>
               <div className="flex flex-col items-center mb-6 sm:mb-14">
                 <Label className="text-main-purple">Benefícios da app</Label>

@@ -195,7 +195,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             </>
           </Container>
         </Section>
-        <section className="grid bg-neutral-9">
+        <section className="grid py-10 sm:py-0 bg-neutral-9">
           <StaticImage
             className="flr-section-bg-image sm:max-h-[760px] opacity-40"
             layout="fullWidth"
@@ -235,6 +235,8 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           isLeft={true}
           className="sm:flex-row flex-col"
           containerTextClass="items-start"
+          brandImage={pLogo1}
+          isHideOnHover={true}
           imgFit="contain" />
 
         <Cta

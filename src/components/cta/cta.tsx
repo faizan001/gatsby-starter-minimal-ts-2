@@ -18,16 +18,18 @@ interface ctaProps {
 }
 const cta:React.FC<ctaProps> = ({title, label, btnLabel, btnHref, isBg, subHeading}) => {
   return (
-      <section className={`${isBg && isBg ? 'grid bg-main-blue-section-secondary' : ''}`}>
-          <StaticImage
-              className="flr-section-bg-image sm:max-h-[860px] opacity-100 z-10"
-              layout="fullWidth"
-              alt="Flair - A Flair leva a moda ate ti de imediato."
-              src={"../../images/bg-pattern.png"}
-              formats={["auto", "webp", "avif"]}
-              quality={100}
-          />
-          <Container className="flex flex-col items-center flr-custom-text-container text-center flr-section-bg-container">
+      <section className={`${isBg && isBg ? 'grid py-10 sm:py-0 bg-main-blue-section-secondary' : ''}`}>
+          {isBg &&
+              <StaticImage
+              className={`${isBg && 'flr-section-bg-image'} sm:max-h-[860px] opacity-100 z-10"`}
+                  layout="fullWidth"
+                  alt="Flair - A Flair leva a moda ate ti de imediato."
+                  src={"../../images/bg-pattern.png"}
+                  formats={["auto", "webp", "avif"]}
+                  quality={100}
+              />
+          }
+          <Container className={`flex flex-col items-center flr-custom-text-container text-center ${isBg && 'flr-section-bg-container'}`}>
               <>
                   <div className="flex flex-col items-center justify-center mb-6 sm:mb-14">
                       <Label className={`${isBg && isBg ?'text-white' : 'text-main-purple'}`}>{ label }</Label>
