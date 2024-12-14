@@ -204,7 +204,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             formats={["auto", "webp", "avif"]}
             quality={100}
           />
-          <Container className="flex flex-col items-center flr-section-bg-container">
+          <Container className="flex flex-col items-center justify-center flr-section-bg-container">
             <>
               <div className="flex flex-col items-center mb-6 sm:mb-14">
                 <Label className="text-main-purple">Benefícios da app</Label>
@@ -238,7 +238,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           imgFit="contain" />
 
         <Cta
-          label="Torna-te Parceiro0"
+          label="Torna-te Parceiro"
           title="Aumenta as vendas da tua loja sem investimento OU recursos extra"
           btnHref="/"
           btnLabel="SABER MAIS" />

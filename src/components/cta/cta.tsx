@@ -29,7 +29,7 @@ const cta:React.FC<ctaProps> = ({title, label, btnLabel, btnHref, isBg, subHeadi
           />
           <Container className="flex flex-col items-center flr-custom-text-container text-center flr-section-bg-container">
               <>
-                  <div className="flex flex-col items-center mb-6 sm:mb-14">
+                  <div className="flex flex-col items-center justify-center mb-6 sm:mb-14">
                       <Label className={`${isBg && isBg ?'text-white' : 'text-main-purple'}`}>{ label }</Label>
                       <Title tag="h2" className={`${isBg && isBg ? 'text-white' : 'text-neutral-9'}`}>
                          {title} 
