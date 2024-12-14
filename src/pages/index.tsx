@@ -154,7 +154,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
                     />
                     <div className="w-full">
                       <span className="text-xs font-light">
-                        FAZ DOWNLOAD NA
+                        FAZ DOWNLOAD NAAa
                       </span>
                       <div className="text-2xl/[20px]">App Store</div>
                     </div>
