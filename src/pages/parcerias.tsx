@@ -218,15 +218,15 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
           </Container>
         </Section>
 
-        <section className="relative bg-neutral-9 py-20"><StaticImage
-          className="flr-section-bg-img sm:max-h-[860px] opacity-100"
+        <section className="grid bg-neutral-9"><StaticImage
+          className="flr-section-bg-image sm:max-h-[860px] opacity-100"
           layout="fullWidth"
           alt="Flair - A Flair leva a moda ate ti de imediato."
           src={"../images/bg-pattern.png"}
           formats={["auto", "webp", "avif"]}
           quality={100}
         />
-          <Container className="flex flex-col items-center">
+          <Container className="flex flex-col items-center flr-section-bg-container">
             <>
               <div className="flex flex-col items-center mb-6 sm:mb-14">
                 <Label className="text-main-purple">Benefícios da app</Label>

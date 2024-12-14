@@ -19,10 +19,6 @@
     @apply max-w-[640px]
 }
 
-.flr-section-bg-img {
-    position:absolute;
-    inset:0;
-}
 /* hero */
 .flr-hero-section{    
     @apply grid text-neutral-0;
@@ -31,11 +27,20 @@
 .flr-hero-bg-container{
     grid-area: 1/1;
 }
+.flr-section-bg-image,.flr-section-bg-container {
+    grid-area: 1/1;
+}
+
+
 /* .flr-hero-bg-image{
     @apply sm:h-[760px];
 }  */
 .flr-hero-bg-container{    
     @apply relative place-items-center flex flex-col pb-[100px] pt-[200px] sm:pt-[170px]
+}
+
+.flr-section-bg-container{    
+    @apply relative place-items-center flex flex-col pb-[50px] pt-[70px] sm:pt-[50px]
 }
 .flr-hero-title{    
     @apply text-4xl sm:text-6xl mb-5 font-highlight

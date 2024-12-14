@@ -18,16 +18,16 @@ interface ctaProps {
 }
 const cta:React.FC<ctaProps> = ({title, label, btnLabel, btnHref, isBg, subHeading}) => {
   return (
-      <section className={`${isBg && isBg ? 'relative bg-main-blue-section-secondary py-20' : 'py-20'}`}>
+      <section className={`${isBg && isBg ? 'grid bg-main-blue-section-secondary' : ''}`}>
           <StaticImage
-              className="flr-section-bg-img sm:max-h-[860px] opacity-100 z-10"
+              className="flr-section-bg-image sm:max-h-[860px] opacity-100 z-10"
               layout="fullWidth"
               alt="Flair - A Flair leva a moda ate ti de imediato."
               src={"../../images/bg-pattern.png"}
               formats={["auto", "webp", "avif"]}
               quality={100}
           />
-          <Container className="flex flex-col items-center flr-custom-text-container text-center">
+          <Container className="flex flex-col items-center flr-custom-text-container text-center flr-section-bg-container">
               <>
                   <div className="flex flex-col items-center mb-6 sm:mb-14">
                       <Label className={`${isBg && isBg ?'text-white' : 'text-main-purple'}`}>{ label }</Label>
