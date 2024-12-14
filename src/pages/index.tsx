@@ -238,7 +238,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           imgFit="contain" />
 
         <Cta
-          label="Torna-te Parceiro"
+          label="Torna-te Parceiro0"
           title="Aumenta as vendas da tua loja sem investimento OU recursos extra"
           btnHref="/"
           btnLabel="SABER MAIS" />
