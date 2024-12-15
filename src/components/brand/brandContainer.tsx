@@ -7,6 +7,7 @@ import Label from "../text/label"
 import Title from "../text/title"
 import Paragraph from "../text/paragraph"
 import Section from "../structure/section"
+import defaultImage from "../../images/app_showcase.png"
 
 interface ImageItem {
     image: string[]; // Each item has an array of image URLs
@@ -46,7 +47,7 @@ const BrandContainer: React.FC<Props> = ({ brandImages, className, button, title
                                         data-sal-duration="1800"
                                         data-sal-easing="ease" />
                                 ) : (
-                                    <img src="default-image-path.jpg" alt={`Default Image ${index + 1}`} /> // Fallback image
+                                    <img src={defaultImage} alt={`Default Image ${index + 1}`} /> // Fallback image
                                 )}
                             </div>
                         ))}
