@@ -54,8 +54,8 @@ const BrandContainer: React.FC<Props> = ({ brandImages, className, button, title
                     </div>
                     {button &&
                         <Button
-                            href="/"
-                            label="SABER MAIS"
+                            href={btnHref || "/"}
+                            label={btnLabel || "SABER MAIS"}
                             className="my-20 self-center sm:self-auto"
                         />
                     }

@@ -140,7 +140,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
                     />
                     <div className="w-full">
                       <span className="text-xs font-light">
-                        FAZ DOWNLOAD NO
+                        FAZ DOWNLOAD NA
                       </span>
                       <div className="text-2xl/[20px]">Google Play</div>
                     </div>
