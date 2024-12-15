@@ -18,7 +18,7 @@ import appleStore from "../images/apple-store.svg"
 import brand1 from "../images/brand-1.png"
 import brand2 from "../images/brand-2.png"
 import brand3 from "../images/brand-3.png"
-import BrandContainer from "../components/brand/brandContainer"
+// import BrandContainer from "../components/brand/brandContainer"
 import HalfBlock from "../components/halfBlock/halfBlock"
 import pLogo1 from '../images/pl-1.png'
 import pLogo2 from '../images/pl-2.png'
@@ -244,12 +244,12 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           title="Aumenta as vendas da tua loja sem investimento OU recursos extra"
           btnHref="/"
           btnLabel="SABER MAIS" />
-        <BrandContainer
+        {/* <BrandContainer
           brandImages={brandImages}
           button={true}
           isCt={true}
           label="Parcerias"
-          title="lojas parceiras" />
+          title="lojas parceiras" /> */}
         <DownloadApp />
       </>
     </Layout>

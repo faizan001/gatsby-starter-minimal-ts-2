@@ -16,7 +16,7 @@ import Slider from "../components/slider/slider"
 import DownloadApp from "../components/downloadApp/downloadApp"
 import HalfBlock from "../components/halfBlock/halfBlock"
 import mudanca from "../images/mudanca.png"
-import BrandContainer from "../components/brand/brandContainer"
+// import BrandContainer from "../components/brand/brandContainer"
 import Cta from "../components/cta/cta"
 import Pricing from "../components/pricing/plans"
 import shopify from "../images/shopify.png"
@@ -261,21 +261,21 @@ const PartneshipsPage: React.FC<PageProps> = ({ location }) => {
           imgFit="contain" />
 
 
-        <BrandContainer
+        {/* <BrandContainer
           brandImages={brandImages}
           button={false}
           isCt={false}
           label="Sistemas Operativos"
           desc="Se o teu POS (sistema operativo) não está listado abaixo, entra em contacto connosco!"
-          title="Integra a tua loja na flair de forma imediata" />
+          title="Integra a tua loja na flair de forma imediata" /> */}
         <Cta label={"Torna-te Parceiro"} subHeading="O fee mais competitivo do mercado é exclusivo para parceiros Flair" isBg={true} title={"grátis 3 meses sem fidelizações"} btnLabel={"JUNTA-TE A NÓS"} btnHref={"/"} />
-        <BrandContainer
+        {/* <BrandContainer
           brandImages={mainBrands}
           button={true}
           isCt={true}
           label="Parcerias"
           desc="Conhece todas as nossas lojas parceiras"
-          title="lojas parceiras" />
+          title="lojas parceiras" /> */}
         <Pricing />
         <DownloadApp />
         <Section
