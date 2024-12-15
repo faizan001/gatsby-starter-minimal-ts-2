@@ -8,7 +8,6 @@ import Title from "../text/title"
 import Paragraph from "../text/paragraph"
 import Section from "../structure/section"
 import defaultImage from "../../images/app_showcase.png"
-
 interface ImageItem {
     image: string[]; // Each item has an array of image URLs
 }
