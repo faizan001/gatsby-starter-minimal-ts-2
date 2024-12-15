@@ -24,7 +24,7 @@ interface Props {
     desc?: string
 }
 
-const brandContainer: React.FC<Props> = ({ brandImages, className, button, title, label, desc, btnHref, btnLabel, isCt }) => {
+const BrandContainer: React.FC<Props> = ({ brandImages, className, button, title, label, desc, btnHref, btnLabel, isCt }) => {
     return (
         <Section className="relative bg-main-blue-100 py-20">
             <Container className="flex flex-col items-center" isBoth={true}>
@@ -78,4 +78,4 @@ const brandContainer: React.FC<Props> = ({ brandImages, className, button, title
     )
 }
 
-export default brandContainer
+export default BrandContainer
