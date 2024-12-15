@@ -15,7 +15,6 @@ interface ImageItem {
 
 interface Props {
     brandImages: ImageItem[];
-    className?: string
     button: boolean,
     btnHref?: string,
     btnLabel?: string,
@@ -25,7 +24,7 @@ interface Props {
     desc?: string
 }
 
-const BrandContainer: React.FC<Props> = ({ brandImages, className, button, title, label, desc, btnHref, btnLabel, isCt }) => {
+const BrandContainer: React.FC<Props> = ({ brandImages, button, title, label, desc, btnHref, btnLabel, isCt }) => {
     return (
         <Section className="relative bg-main-blue-100 py-20">
             <Container className="flex flex-col items-center" isBoth={true}>
